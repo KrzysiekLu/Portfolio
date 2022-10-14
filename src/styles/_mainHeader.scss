@@ -1,0 +1,53 @@
+.main-header {
+  margin-top: 5rem;
+  max-width: 100%;
+  //   border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    position: relative;
+    margin-top: 7rem;
+    margin-left: 4rem;
+    font-size: 2.4rem;
+    max-width: 14.3rem;
+    z-index: -1;
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: -0.5rem;
+      content: "";
+      height: 1.4rem;
+      width: 90%;
+      background: $main-title-color-accent;
+      z-index: -2;
+    }
+  }
+  &__image {
+    display: block;
+    margin: 3.2rem auto 3.2rem;
+  }
+  &__subtitle {
+    align-self: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  &__btn {
+    font-size: 1.6rem;
+    min-width: 15rem;
+    min-height: 4rem;
+    align-self: center;
+    border: 2px solid $border-color;
+    border-radius: 2rem;
+    margin-top: 5.7rem;
+    transition: 0.3s transform ease-in-out;
+
+    &:hover {
+      transform: translateY(-0.5rem);
+    }
+  }
+  &__arrow-down {
+    margin-top: 2.5rem;
+    align-self: center;
+  }
+}

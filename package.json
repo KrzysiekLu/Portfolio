@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "build:dev": "rm -rf dist && parcel index.html"
+  },
+  "dependencies": {
+    "typed.js": "^2.0.12"
+  },
+  "devDependencies": {
+    "parcel": "^2.7.0"
+  }
+}
