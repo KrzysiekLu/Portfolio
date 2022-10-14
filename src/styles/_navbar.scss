@@ -1,0 +1,63 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  min-width: 100%;
+  padding: 1rem;
+
+  // After click
+
+  &__menu,
+  .menu {
+    position: fixed;
+    top: 0;
+    left: -15rem;
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    height: 100%;
+    font-size: 1.6rem;
+    background-color: $main-bg-color;
+    border-radius: 0 2rem 2rem 0;
+    transition: 0.5s transform ease;
+    z-index: 1;
+
+    &__link {
+      width: 100%;
+      padding: 1.5rem;
+      margin-bottom: 4rem;
+      &:first-child {
+        margin-top: 5.6rem;
+      }
+      &:hover {
+        transition: background-color 0.2s ease-in, color 0.2s ease;
+        background-color: $accent-color;
+        color: $main-bg-color;
+      }
+    }
+
+    &__items {
+      padding-left: 1.5rem;
+    }
+  }
+
+  // Open menu
+  .menu--open {
+    transform: translateX(15rem);
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(45, 44, 44, 0.55);
+    opacity: 0;
+    transition: 0.5s opacity ease;
+    z-index: -1;
+  }
+
+  &__overlay--open {
+    opacity: 1;
+  }
+}

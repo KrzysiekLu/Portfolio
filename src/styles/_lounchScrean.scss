@@ -1,0 +1,57 @@
+.launch-screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  z-index: 2;
+  &__curtain {
+    background-color: $main-bg-color;
+    height: 100%;
+    width: 50%;
+    &--left {
+      box-shadow: 0 0 8rem 0.1rem black;
+      position: relative;
+      &--open {
+        transform: translateX(-130%);
+        transition: 2s transform ease-out;
+      }
+    }
+    &--right {
+      &--open {
+        transform: translateX(130%);
+        transition: 2s transform ease-out;
+      }
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+    background: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    padding: 3rem;
+    background-color: $main-bg-color;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #f0f0f0, #cacaca);
+    box-shadow: 15px 15px 30px #8d8d8d, -15px -15px 30px #ffffff;
+    &:hover {
+      background: linear-gradient(145deg, #cacaca, #f0f0f0);
+      box-shadow: 6px 6px 12px #8d8d8d, -6px -6px 12px #ffffff;
+      transition: background 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    &--clicked {
+      background: linear-gradient(145deg, #cacaca, #f0f0f0);
+      box-shadow: 6px 6px 12px #8d8d8d, -6px -6px 12px #ffffff;
+      transition: transform 2.7s ease 1s;
+    }
+  }
+}
+
+// Procent otwacia kurtyny dla mobile większy dla desktop mniejszy
