@@ -3,8 +3,9 @@
   padding: 0 2.8rem;
   position: relative;
   margin-bottom: 20rem;
-  transform: translateY(10%);
+  transform: translateY(15%);
   opacity: 0;
+
   &::after {
     content: "";
     position: absolute;
@@ -42,7 +43,7 @@
   }
 }
 .about-me--active {
-  transform: translateY(-10%);
+  transform: translateY(0%);
   transition: transform 1s ease, opacity 1s ease;
   opacity: 1;
 }

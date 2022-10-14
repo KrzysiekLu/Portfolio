@@ -4,6 +4,16 @@ export const launchScreen = () => {
   const launchScreenCurtain = document.querySelectorAll(
     ".launch-screen__curtain"
   );
+  function preventScroll(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    return false;
+  }
+
+  launchScreenCurtain.forEach((el) => {
+    el.addEventListener("wheel", preventScroll, { passive: false });
+  });
 
   const launchScreenButton = document.querySelector(".launch-screen__button");
   const launchScreenContainer = document.querySelector(".launch-screen");
