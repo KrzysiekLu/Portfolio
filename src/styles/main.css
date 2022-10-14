@@ -30,7 +30,6 @@ button {
   left: 0;
   display: flex;
   z-index: 3;
-  overflow: hidden;
 }
 .launch-screen__curtain {
   background-color: #d9d9d9;

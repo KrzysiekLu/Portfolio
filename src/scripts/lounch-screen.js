@@ -14,9 +14,15 @@ export const launchScreen = () => {
   document
     .querySelector("body")
     .addEventListener("wheel", preventScroll, { passive: false });
+  document
+    .querySelector("body")
+    .addEventListener("touchmove", preventScroll, { passive: false });
 
   const enableScroll = () => {
     document.querySelector("body").removeEventListener("wheel", preventScroll);
+    document
+      .querySelector("body")
+      .removeEventListener("touchmove", preventScroll);
   };
 
   const launchScreenButton = document.querySelector(".launch-screen__button");
