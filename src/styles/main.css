@@ -224,11 +224,11 @@ button {
 }
 
 .about-me {
-  margin-top: 18rem;
+  margin-top: 20rem;
   padding: 0 2.8rem;
   position: relative;
   margin-bottom: 20rem;
-  transform: translateY(15%);
+  transform: translateY(20%);
   opacity: 0;
 }
 .about-me::after {
