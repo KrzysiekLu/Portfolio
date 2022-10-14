@@ -551,11 +551,12 @@ const launchScreen = ()=>{
         e.stopPropagation();
         return false;
     }
-    launchScreenCurtain.forEach((el)=>{
-        el.addEventListener("wheel", preventScroll, {
-            passive: false
-        });
+    document.querySelector("body").addEventListener("wheel", preventScroll, {
+        passive: false
     });
+    const enableScroll = ()=>{
+        document.querySelector("body").removeEventListener("wheel", preventScroll);
+    };
     const launchScreenButton = document.querySelector(".launch-screen__button");
     const launchScreenContainer = document.querySelector(".launch-screen");
     //////// Helping functions
@@ -573,6 +574,7 @@ const launchScreen = ()=>{
     };
     // Listeners
     launchScreenButton.addEventListener("click", (e)=>{
+        enableScroll();
         openLeft();
         openRight();
         openButton();
