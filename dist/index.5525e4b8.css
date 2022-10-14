@@ -218,16 +218,24 @@ button {
   align-self: center;
   margin-top: 5.7rem;
   font-size: 1.6rem;
-  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
+  display: block;
+  box-shadow: 0 .5rem 1.5rem -.5rem #000;
 }
 
 .main-header__btn:hover {
   transform: translateY(-.5rem);
+  box-shadow: 0 1rem 1.5rem -.5rem #000;
 }
 
 .main-header__arrow-down {
   align-self: center;
   margin-top: 2.5rem;
+  transition: transform .3s ease-in-out;
+}
+
+.main-header__arrow-down--active {
+  transform: translateY(2rem);
 }
 
 /*# sourceMappingURL=index.5525e4b8.css.map */

@@ -196,6 +196,7 @@ button {
   font-weight: 600;
 }
 .main-header__btn {
+  display: block;
   font-size: 1.6rem;
   min-width: 15rem;
   min-height: 4rem;
@@ -203,12 +204,18 @@ button {
   border: 2px solid #434343;
   border-radius: 2rem;
   margin-top: 5.7rem;
-  transition: 0.3s transform ease-in-out;
+  box-shadow: 0 0.5rem 1.5rem -0.5rem black;
+  transition: 0.3s transform ease-in-out, 0.3s box-shadow ease-in-out;
 }
 .main-header__btn:hover {
   transform: translateY(-0.5rem);
+  box-shadow: 0 1rem 1.5rem -0.5rem black;
 }
 .main-header__arrow-down {
   margin-top: 2.5rem;
   align-self: center;
+  transition: 0.3s transform ease-in-out;
+}
+.main-header__arrow-down--active {
+  transform: translateY(2rem);
 }/*# sourceMappingURL=main.css.map */

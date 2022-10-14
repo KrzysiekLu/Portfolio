@@ -535,8 +535,9 @@ function hmrAcceptRun(bundle, id) {
 var _lounchScreenJs = require("./lounch-screen.js");
 var _mobileNavMenuJs = require("./mobileNavMenu.js");
 var _writeSubtitleJs = require("./writeSubtitle.js");
+var _moveHeaderArrowJs = require("./moveHeaderArrow.js");
 
-},{"./lounch-screen.js":"iuvBz","./mobileNavMenu.js":"6YDZm","./writeSubtitle.js":"5UTro"}],"iuvBz":[function(require,module,exports) {
+},{"./lounch-screen.js":"iuvBz","./mobileNavMenu.js":"6YDZm","./writeSubtitle.js":"5UTro","./moveHeaderArrow.js":"713a0"}],"iuvBz":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "launchScreen", ()=>launchScreen);
@@ -1432,6 +1433,24 @@ writeSubtitle();
     ]);
 });
 
-},{}]},["7age3","3cYfC"], "3cYfC", "parcelRequire94c2")
+},{}],"713a0":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "moveHeaderArrow", ()=>moveHeaderArrow);
+const moveHeaderArrow = ()=>{
+    const headerButton = document.querySelector(".main-header__btn");
+    const arrow = document.querySelector(".main-header__arrow-down");
+    const addClassArrow = ()=>{
+        arrow.classList.add("main-header__arrow-down--active");
+    };
+    const removeArrowClass = ()=>{
+        arrow.classList.remove("main-header__arrow-down--active");
+    };
+    headerButton.addEventListener("mouseover", addClassArrow);
+    headerButton.addEventListener("mouseleave", removeArrowClass);
+};
+moveHeaderArrow();
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["7age3","3cYfC"], "3cYfC", "parcelRequire94c2")
 
 //# sourceMappingURL=index.b8fca702.js.map
