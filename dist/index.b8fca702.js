@@ -536,15 +536,15 @@ var _lounchScreenJs = require("./lounch-screen.js");
 var _mobileNavMenuJs = require("./mobileNavMenu.js");
 var _writeSubtitleJs = require("./writeSubtitle.js");
 var _moveHeaderArrowJs = require("./moveHeaderArrow.js");
+var _moveToAboutmeJs = require("./moveToAboutme.js");
 
-},{"./lounch-screen.js":"iuvBz","./mobileNavMenu.js":"6YDZm","./writeSubtitle.js":"5UTro","./moveHeaderArrow.js":"713a0"}],"iuvBz":[function(require,module,exports) {
+},{"./lounch-screen.js":"iuvBz","./mobileNavMenu.js":"6YDZm","./writeSubtitle.js":"5UTro","./moveHeaderArrow.js":"713a0","./moveToAboutme.js":"dT3fP"}],"iuvBz":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "launchScreen", ()=>launchScreen);
 const launchScreen = ()=>{
     //Elements
     const launchScreenCurtain = document.querySelectorAll(".launch-screen__curtain");
-    console.log(launchScreenCurtain);
     const launchScreenButton = document.querySelector(".launch-screen__button");
     const launchScreenContainer = document.querySelector(".launch-screen");
     //////// Helping functions
@@ -569,7 +569,8 @@ const launchScreen = ()=>{
             launchScreenContainer.style.display = "none";
         }, 1500);
     });
-}; // launchScreen();
+};
+launchScreen();
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
@@ -1450,6 +1451,23 @@ const moveHeaderArrow = ()=>{
     headerButton.addEventListener("mouseleave", removeArrowClass);
 };
 moveHeaderArrow();
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dT3fP":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "moveToAboutMe", ()=>moveToAboutMe);
+const moveToAboutMe = ()=>{
+    const headerButton = document.querySelector(".main-header__btn");
+    const aboutMeSection = document.querySelector(".about-me");
+    headerButton.addEventListener("click", ()=>{
+        aboutMeSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+            inline: "nearest"
+        });
+    });
+};
+moveToAboutMe();
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["7age3","3cYfC"], "3cYfC", "parcelRequire94c2")
 

@@ -25,7 +25,7 @@ button {
 .launch-screen {
   width: 100%;
   height: 100%;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   position: fixed;
   top: 0;
@@ -80,6 +80,7 @@ button {
 
 .navbar {
   min-width: 100%;
+  z-index: 2;
   padding: 1rem;
   position: fixed;
   top: 0;
@@ -205,6 +206,7 @@ button {
 }
 
 .main-header__subtitle {
+  min-height: 2.2rem;
   align-self: center;
   font-size: 1.6rem;
   font-weight: 600;
@@ -240,6 +242,7 @@ button {
 
 .about-me {
   margin-top: 18rem;
+  margin-bottom: 20rem;
   padding: 0 2.8rem;
   position: relative;
 }

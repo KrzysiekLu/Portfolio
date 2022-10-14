@@ -4,7 +4,6 @@ export const launchScreen = () => {
   const launchScreenCurtain = document.querySelectorAll(
     ".launch-screen__curtain"
   );
-  console.log(launchScreenCurtain);
 
   const launchScreenButton = document.querySelector(".launch-screen__button");
   const launchScreenContainer = document.querySelector(".launch-screen");
@@ -35,4 +34,4 @@ export const launchScreen = () => {
     }, 1500);
   });
 };
-// launchScreen();
+launchScreen();
