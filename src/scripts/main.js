@@ -3,3 +3,4 @@ import { mobileMenu } from "./mobileNavMenu.js";
 import { writeSbtitle } from "./writeSubtitle.js";
 import { moveHeaderArrow } from "./moveHeaderArrow.js";
 import { moveToAboutMe } from "./moveToAboutme.js";
+import { observers } from "./observers.js";

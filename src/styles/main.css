@@ -227,6 +227,8 @@ button {
   padding: 0 2.8rem;
   position: relative;
   margin-bottom: 20rem;
+  transform: translateY(10%);
+  opacity: 0;
 }
 .about-me::after {
   content: "";
@@ -262,4 +264,10 @@ button {
 .about-me__description .paragraph {
   display: block;
   margin-bottom: 2rem;
+}
+
+.about-me--active {
+  transform: translateY(-10%);
+  transition: transform 1s ease, opacity 1s ease;
+  opacity: 1;
 }/*# sourceMappingURL=main.css.map */

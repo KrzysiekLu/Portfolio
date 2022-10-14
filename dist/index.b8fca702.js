@@ -537,8 +537,9 @@ var _mobileNavMenuJs = require("./mobileNavMenu.js");
 var _writeSubtitleJs = require("./writeSubtitle.js");
 var _moveHeaderArrowJs = require("./moveHeaderArrow.js");
 var _moveToAboutmeJs = require("./moveToAboutme.js");
+var _observersJs = require("./observers.js");
 
-},{"./lounch-screen.js":"iuvBz","./mobileNavMenu.js":"6YDZm","./writeSubtitle.js":"5UTro","./moveHeaderArrow.js":"713a0","./moveToAboutme.js":"dT3fP"}],"iuvBz":[function(require,module,exports) {
+},{"./lounch-screen.js":"iuvBz","./mobileNavMenu.js":"6YDZm","./writeSubtitle.js":"5UTro","./moveHeaderArrow.js":"713a0","./moveToAboutme.js":"dT3fP","./observers.js":"5bz6Q"}],"iuvBz":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "launchScreen", ()=>launchScreen);
@@ -1468,6 +1469,25 @@ const moveToAboutMe = ()=>{
     });
 };
 moveToAboutMe();
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5bz6Q":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "observers", ()=>observers);
+const observers = ()=>{
+    const sectionAboutMe = document.querySelector(".about-me");
+    const sectionObserverOptions = {
+        rootMargin: "0px 0px 0px 0px"
+    };
+    const showSection = ()=>{
+        sectionAboutMe.classList.add("about-me--active");
+    };
+    const sectionObserver = new IntersectionObserver((e)=>{
+        e[0].isIntersecting && showSection();
+    }, sectionObserverOptions);
+    sectionObserver.observe(sectionAboutMe);
+};
+observers();
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["7age3","3cYfC"], "3cYfC", "parcelRequire94c2")
 
