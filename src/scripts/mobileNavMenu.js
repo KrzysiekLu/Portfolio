@@ -23,6 +23,15 @@ export const mobileMenu = () => {
     showMobileMenu();
     showOverlay();
   });
+
+  //closing menu after clicking on a menu element
+  mobileMenu.childNodes.forEach((menulink) => {
+    menulink.addEventListener("click", () => {
+      changeHamburgerButton();
+      showMobileMenu();
+      showOverlay();
+    });
+  });
 };
 
 mobileMenu();
