@@ -5,7 +5,7 @@ export const moveToAboutMe = () => {
   headerButton.addEventListener("click", () => {
     aboutMeSection.scrollIntoView({
       behavior: "smooth",
-      block: "start",
+      block: "nearest",
       inline: "nearest",
     });
   });

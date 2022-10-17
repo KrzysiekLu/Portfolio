@@ -242,11 +242,10 @@ button {
 
 .about-me {
   opacity: 0;
-  margin-top: 20rem;
+  margin-top: 10rem;
   margin-bottom: 210rem;
   padding: 0 2.8rem;
   position: relative;
-  transform: translateY(20%);
 }
 
 .about-me:after {
@@ -291,9 +290,9 @@ button {
 
 .about-me--active {
   opacity: 1;
-  margin-top: 10rem;
+  padding-top: 20%;
   transition: transform 1s, opacity 1s;
-  transform: translateY(0%);
+  transform: translateY(-5%);
 }
 
 /*# sourceMappingURL=index.5525e4b8.css.map */

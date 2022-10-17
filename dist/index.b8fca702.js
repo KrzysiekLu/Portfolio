@@ -1482,7 +1482,7 @@ const moveToAboutMe = ()=>{
     headerButton.addEventListener("click", ()=>{
         aboutMeSection.scrollIntoView({
             behavior: "smooth",
-            block: "start",
+            block: "nearest",
             inline: "nearest"
         });
     });
@@ -1496,7 +1496,7 @@ parcelHelpers.export(exports, "observers", ()=>observers);
 const observers = ()=>{
     const sectionAboutMe = document.querySelector(".about-me");
     const sectionObserverOptions = {
-        rootMargin: "0px 0px 0px 0px"
+        rootMargin: "0px 0px -200px 0px"
     };
     const showSection = ()=>{
         sectionAboutMe.classList.add("about-me--active");
