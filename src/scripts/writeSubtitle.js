@@ -1,5 +1,5 @@
 import Typed from "typed.js";
-const writeSubtitle = () => {
+export const writeSubtitle = () => {
   const text = new Typed(".main-header__subtitle", {
     strings: ["Front end developer.", " Wannabe be front end developer."],
     // loop: true,
@@ -8,4 +8,3 @@ const writeSubtitle = () => {
     backDelay: 800,
   });
 };
-writeSubtitle();

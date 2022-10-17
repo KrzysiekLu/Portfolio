@@ -543,6 +543,7 @@ var _observersJs = require("./observers.js");
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "launchScreen", ()=>launchScreen);
+var _writeSubtitleJs = require("./writeSubtitle.js");
 const launchScreen = ()=>{
     //Elements
     const launchScreenCurtain = document.querySelectorAll(".launch-screen__curtain");
@@ -584,12 +585,13 @@ const launchScreen = ()=>{
         openButton();
         setTimeout(()=>{
             launchScreenContainer.style.display = "none";
-        }, 1500);
+        }, 2000);
+        (0, _writeSubtitleJs.writeSubtitle)();
     });
 };
 launchScreen();
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./writeSubtitle.js":"5UTro"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -619,37 +621,10 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"6YDZm":[function(require,module,exports) {
+},{}],"5UTro":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "mobileMenu", ()=>mobileMenu);
-const mobileMenu = ()=>{
-    const hamburgerButton = document.querySelector(".hamburger");
-    const mobileMenu = document.querySelector(".menu");
-    const menuOverlay = document.querySelector(".navbar__overlay");
-    // change hamburger button
-    const changeHamburgerButton = ()=>{
-        hamburgerButton.classList.toggle("hamburger--open");
-    };
-    // show mobile menu
-    const showMobileMenu = ()=>{
-        mobileMenu.classList.toggle("menu--open");
-        console.log(mobileMenu);
-    };
-    //show overlay
-    const showOverlay = ()=>{
-        menuOverlay.classList.toggle("navbar__overlay--open");
-    };
-    hamburgerButton.addEventListener("click", ()=>{
-        changeHamburgerButton();
-        showMobileMenu();
-        showOverlay();
-    });
-};
-mobileMenu();
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5UTro":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.export(exports, "writeSubtitle", ()=>writeSubtitle);
 var _typedJs = require("typed.js");
 var _typedJsDefault = parcelHelpers.interopDefault(_typedJs);
 const writeSubtitle = ()=>{
@@ -664,7 +639,6 @@ const writeSubtitle = ()=>{
         backDelay: 800
     });
 };
-writeSubtitle();
 
 },{"typed.js":"4hQNd","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4hQNd":[function(require,module,exports) {
 /*!
@@ -1451,7 +1425,36 @@ writeSubtitle();
     ]);
 });
 
-},{}],"713a0":[function(require,module,exports) {
+},{}],"6YDZm":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "mobileMenu", ()=>mobileMenu);
+const mobileMenu = ()=>{
+    const hamburgerButton = document.querySelector(".hamburger");
+    const mobileMenu = document.querySelector(".menu");
+    const menuOverlay = document.querySelector(".navbar__overlay");
+    // change hamburger button
+    const changeHamburgerButton = ()=>{
+        hamburgerButton.classList.toggle("hamburger--open");
+    };
+    // show mobile menu
+    const showMobileMenu = ()=>{
+        mobileMenu.classList.toggle("menu--open");
+        console.log(mobileMenu);
+    };
+    //show overlay
+    const showOverlay = ()=>{
+        menuOverlay.classList.toggle("navbar__overlay--open");
+    };
+    hamburgerButton.addEventListener("click", ()=>{
+        changeHamburgerButton();
+        showMobileMenu();
+        showOverlay();
+    });
+};
+mobileMenu();
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"713a0":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "moveHeaderArrow", ()=>moveHeaderArrow);

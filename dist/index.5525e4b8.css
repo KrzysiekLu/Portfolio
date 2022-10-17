@@ -291,6 +291,7 @@ button {
 
 .about-me--active {
   opacity: 1;
+  margin-top: 10rem;
   transition: transform 1s, opacity 1s;
   transform: translateY(0%);
 }

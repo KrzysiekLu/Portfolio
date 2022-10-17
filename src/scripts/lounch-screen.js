@@ -1,3 +1,5 @@
+import { writeSubtitle } from "./writeSubtitle.js";
+
 export const launchScreen = () => {
   //Elements
 
@@ -52,7 +54,8 @@ export const launchScreen = () => {
     openButton();
     setTimeout(() => {
       launchScreenContainer.style.display = "none";
-    }, 1500);
+    }, 2000);
+    writeSubtitle();
   });
 };
 launchScreen();
