@@ -1,10 +1,7 @@
 .about-me {
   margin-top: 10rem;
-  padding: 0 2.8rem;
+  padding: 2rem 2.8rem;
   position: relative;
-  margin-bottom: 210rem;
-  // transform: translateY(20%);
-  opacity: 0;
 
   &::after {
     content: "";
@@ -14,7 +11,7 @@
     height: 3rem;
     background-color: $about-me-accent;
     z-index: -1;
-    top: 14%;
+    top: 30%;
     right: 0;
   }
   &::before {
@@ -25,27 +22,33 @@
     height: 3rem;
     background-color: $about-me-accent;
     z-index: -1;
-    top: 50%;
+    top: 70%;
     left: 0;
   }
   &__title {
     font-size: 2.4rem;
     margin-bottom: 2.3rem;
+    transform: translateY(5rem);
+    opacity: 0;
+    &::after {
+      background-color: $about-me-accent;
+    }
   }
   &__description {
     max-width: 30rem;
     font-size: 1.6rem;
     line-height: 2.2rem;
+    transform: translateY(5rem);
+    opacity: 0;
     .paragraph {
       display: block;
       margin-bottom: 2rem;
     }
   }
 }
+
 .about-me--active {
-  transform: translateY(-5%);
-  padding-top: 20%;
-  // margin-top: 10rem;
+  transform: translateY(0);
   transition: transform 1s ease, opacity 1s ease;
   opacity: 1;
 }

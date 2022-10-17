@@ -15,14 +15,14 @@
       box-shadow: 0 0 8rem 0.1rem black;
       position: relative;
       &--open {
-        transform: translateX(-130%);
-        transition: 2s transform ease-out;
+        transform: translateX(-150%);
+        transition: 1.5s transform ease-out;
       }
     }
     &--right {
       &--open {
-        transform: translateX(130%);
-        transition: 2s transform ease-out;
+        transform: translateX(150%);
+        transition: 1.5s transform ease-out;
       }
     }
   }

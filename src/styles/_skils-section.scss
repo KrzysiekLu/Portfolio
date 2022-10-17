@@ -1,0 +1,29 @@
+.skils {
+  padding: 2rem 2.8rem;
+  &__title {
+    &::after {
+      background-color: $skils-accent;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-columns: max-content;
+  }
+  &__item {
+    min-width: 28rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    &__icon {
+      width: 50px;
+      margin-right: 2rem;
+    }
+    &__title {
+      font-size: 1.6rem;
+    }
+  }
+}

@@ -22,6 +22,24 @@ button {
   font-family: Roboto Mono, monospace;
 }
 
+.section-title {
+  margin-bottom: 2.3rem;
+  font-size: 2.4rem;
+  display: inline-block;
+  position: relative;
+}
+
+.section-title:after {
+  content: "";
+  width: 100%;
+  height: 50%;
+  z-index: -1;
+  display: block;
+  position: absolute;
+  bottom: 0%;
+  left: 10%;
+}
+
 .launch-screen {
   width: 100%;
   height: 100vh;
@@ -44,13 +62,13 @@ button {
 }
 
 .launch-screen__curtain--left--open {
-  transition: transform 2s ease-out;
-  transform: translateX(-130%);
+  transition: transform 1.5s ease-out;
+  transform: translateX(-150%);
 }
 
 .launch-screen__curtain--right--open {
-  transition: transform 2s ease-out;
-  transform: translateX(130%);
+  transition: transform 1.5s ease-out;
+  transform: translateX(150%);
 }
 
 .launch-screen__button {
@@ -241,10 +259,8 @@ button {
 }
 
 .about-me {
-  opacity: 0;
   margin-top: 10rem;
-  margin-bottom: 210rem;
-  padding: 0 2.8rem;
+  padding: 2rem 2.8rem;
   position: relative;
 }
 
@@ -256,7 +272,7 @@ button {
   background-color: #f3bb4d8f;
   display: block;
   position: absolute;
-  top: 14%;
+  top: 30%;
   right: 0;
 }
 
@@ -268,19 +284,27 @@ button {
   background-color: #f3bb4d8f;
   display: block;
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 0;
 }
 
 .about-me__title {
+  opacity: 0;
   margin-bottom: 2.3rem;
   font-size: 2.4rem;
+  transform: translateY(5rem);
+}
+
+.about-me__title:after {
+  background-color: #f3bb4d8f;
 }
 
 .about-me__description {
   max-width: 30rem;
+  opacity: 0;
   font-size: 1.6rem;
   line-height: 2.2rem;
+  transform: translateY(5rem);
 }
 
 .about-me__description .paragraph {
@@ -290,9 +314,41 @@ button {
 
 .about-me--active {
   opacity: 1;
-  padding-top: 20%;
   transition: transform 1s, opacity 1s;
-  transform: translateY(-5%);
+  transform: translateY(0);
+}
+
+.skils {
+  padding: 2rem 2.8rem;
+}
+
+.skils__title:after {
+  background-color: #60e0e9;
+}
+
+.skils__container {
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-columns: -webkit-max-content;
+  flex-direction: column;
+  grid-auto-columns: max-content;
+  align-items: center;
+  display: flex;
+}
+
+.skils__item {
+  min-width: 28rem;
+  align-items: center;
+  margin-bottom: 3rem;
+  display: flex;
+}
+
+.skils__item__icon {
+  width: 50px;
+  margin-right: 2rem;
+}
+
+.skils__item__title {
+  font-size: 1.6rem;
 }
 
 /*# sourceMappingURL=index.5525e4b8.css.map */
