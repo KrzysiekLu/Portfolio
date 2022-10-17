@@ -631,7 +631,7 @@ const writeSubtitle = ()=>{
     const text = new (0, _typedJsDefault.default)(".main-header__subtitle", {
         strings: [
             "Front end developer.",
-            " Wannabe be front end developer."
+            " Wannabe front end developer."
         ],
         // loop: true,
         typeSpeed: 40,
@@ -1490,7 +1490,7 @@ const moveToAboutMe = ()=>{
     headerButton.addEventListener("click", ()=>{
         aboutMeSection.scrollIntoView({
             behavior: "smooth",
-            block: "nearest",
+            block: "start",
             inline: "nearest"
         });
     });
@@ -1504,7 +1504,7 @@ parcelHelpers.export(exports, "observers", ()=>observers);
 const observers = ()=>{
     const sectionAboutMe = document.querySelector(".about-me");
     const sectionObserverOptions = {
-        rootMargin: "0px 0px -200px 0px"
+        rootMargin: "0px 0px -300px 0px"
     };
     const showSection = ()=>{
         sectionAboutMe.classList.add("about-me--active");

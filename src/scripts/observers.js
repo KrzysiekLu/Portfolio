@@ -2,7 +2,7 @@ export const observers = () => {
   const sectionAboutMe = document.querySelector(".about-me");
 
   const sectionObserverOptions = {
-    rootMargin: "0px 0px -200px 0px",
+    rootMargin: "0px 0px -300px 0px",
   };
   const showSection = () => {
     sectionAboutMe.classList.add("about-me--active");

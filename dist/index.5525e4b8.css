@@ -206,8 +206,8 @@ button {
 }
 
 .main-header__subtitle {
-  min-height: 2.2rem;
-  align-self: center;
+  height: 4.6rem;
+  text-align: center;
   font-size: 1.6rem;
   font-weight: 600;
 }
@@ -218,7 +218,7 @@ button {
   border: 2px solid #434343;
   border-radius: 2rem;
   align-self: center;
-  margin-top: 5.7rem;
+  margin-top: 4rem;
   font-size: 1.6rem;
   transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
   display: block;

@@ -192,10 +192,10 @@ button {
   margin: 3.2rem auto 3.2rem;
 }
 .main-header__subtitle {
-  align-self: center;
   font-size: 1.6rem;
   font-weight: 600;
-  min-height: 2.2rem;
+  height: 4.6rem;
+  text-align: center;
 }
 .main-header__btn {
   display: block;
@@ -205,7 +205,7 @@ button {
   align-self: center;
   border: 2px solid #434343;
   border-radius: 2rem;
-  margin-top: 5.7rem;
+  margin-top: 4rem;
   box-shadow: 0 0.5rem 1.5rem -0.5rem black;
   transition: 0.3s transform ease-in-out, 0.3s box-shadow ease-in-out;
 }
