@@ -1482,7 +1482,8 @@ const moveToAboutMe = ()=>{
     headerButton.addEventListener("click", ()=>{
         aboutMeSection.scrollIntoView({
             behavior: "smooth",
-            block: "nearest"
+            block: "start",
+            inline: "nearest"
         });
     });
 };
