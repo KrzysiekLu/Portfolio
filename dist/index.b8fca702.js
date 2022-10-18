@@ -585,7 +585,7 @@ const launchScreen = ()=>{
         openButton();
         setTimeout(()=>{
             launchScreenContainer.style.display = "none";
-        }, 2000);
+        }, 1200);
         (0, _writeSubtitleJs.writeSubtitle)();
     });
 };
@@ -1447,7 +1447,13 @@ const mobileMenu = ()=>{
     const showOverlay = ()=>{
         menuOverlay.classList.toggle("navbar__overlay--open");
     };
+    // Prevent tab key navigation when mobile menu is close
+    const changeTabBlock = (index)=>{
+        mobileMenu.childNodes.forEach((item)=>item.children ? item.children[0].setAttribute("tabindex", index) : false);
+    };
+    // action for hamburger click
     hamburgerButton.addEventListener("click", ()=>{
+        mobileMenu.classList.contains("menu--open") ? changeTabBlock(-1) : changeTabBlock(1);
         changeHamburgerButton();
         showMobileMenu();
         showOverlay();
@@ -1504,13 +1510,11 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "observers", ()=>observers);
 const observers = ()=>{
     const sections = document.querySelectorAll(".section");
-    console.log(sections);
     const sectionObserverOptions = {
         rootMargin: "-200px 0px -150px 0px"
     };
     // function adding a class to show sections
     const showSection = (obsSection)=>{
-        console.log(obsSection);
         obsSection[0].target.classList.add("section--active");
     };
     // observer for fadein section

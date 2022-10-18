@@ -202,12 +202,12 @@ button {
   border: 2px solid #434343;
   border-radius: 2rem;
   margin-top: 4rem;
-  box-shadow: 0 0.5rem 1.5rem -0.5rem black;
+  box-shadow: 0 0.5rem 1.5rem -0.5rem rgb(60, 60, 60);
   transition: 0.3s transform ease-in-out, 0.3s box-shadow ease-in-out;
 }
 .main-header__btn:hover {
   transform: translateY(-0.5rem);
-  box-shadow: 0 1rem 1.5rem -0.5rem black;
+  box-shadow: 0 1rem 1rem -0.5rem rgb(85, 85, 85);
 }
 .main-header__arrow-down {
   margin-top: 2.5rem;
@@ -315,6 +315,8 @@ button {
   padding: 2rem 2.8rem;
   opacity: 0;
   transform: translateY(5rem);
+  max-width: 50rem;
+  margin: 0 auto;
 }
 
 .section--active {

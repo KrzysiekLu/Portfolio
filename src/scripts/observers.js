@@ -1,6 +1,5 @@
 export const observers = () => {
   const sections = document.querySelectorAll(".section");
-  console.log(sections);
 
   const sectionObserverOptions = {
     rootMargin: "-200px 0px -150px 0px",
@@ -8,7 +7,6 @@ export const observers = () => {
 
   // function adding a class to show sections
   const showSection = (obsSection) => {
-    console.log(obsSection);
     obsSection[0].target.classList.add("section--active");
   };
 

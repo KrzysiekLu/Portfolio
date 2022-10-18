@@ -29,7 +29,7 @@
     </div>
     <header class="main-header">
       <nav class="main-header__navbar navbar">
-       <div class="navbar__hamburger hamburger">
+       <div class="navbar__hamburger hamburger "tabindex="1">
         <div class="hamburger__bar"></div>
         <div class="hamburger__bar"></div>
         <div class="hamburger__bar"></div>
@@ -39,16 +39,16 @@
 
         <ul class="navbar__menu menu">
           
-            <li class="menu__item"><a data-destn="about-me" class="menu__link" href="#about-me">About me</a></li>
+            <li class="menu__item"><a data-destn="about-me" class="menu__link" tabindex="-1" href="#about-me">About me</a></li>
           
           
-            <li class="menu__item"><a data-destn="skils-section" class="menu__link" href="#skils-section">Skils</a></li> 
+            <li class="menu__item"><a data-destn="skils-section" class="menu__link"tabindex="-1" href="#skils-section">Skils</a></li> 
          
           
-            <li class="menu__item"> <a class="menu__link" href="#">Projects</a></li> 
+            <li class="menu__item"> <a class="menu__link"tabindex="-1" href="#">Projects</a></li> 
          
           
-             <li class="menu__item"><a class="menu__link" href="#">Contact</a></li> 
+             <li class="menu__item"><a class="menu__link"tabindex="-1" href="#">Contact</a></li> 
          
         </ul>
         <div class="navbar__overlay"></div>
@@ -97,8 +97,12 @@
           <div class="skils__item__title">Type-Script</div>
         </div>
         <div class="skils__item ">
-          <img alt="HTML icon" src="./src/images/skils-icons/git-icon.png" class="skils__item__icon"></img>
+          <img alt="HTML icon" src="./src/images/skils-icons/npm-icon.png" class="skils__item__icon"></img>
           <div class="skils__item__title">Node package manager</div>
+        </div>
+        <div class="skils__item ">
+          <img alt="HTML icon" src="./src/images/skils-icons/git-icon.png" class="skils__item__icon"></img>
+          <div class="skils__item__title">Git</div>
         </div>
         <div class="skils__item ">
           <img alt="HTML icon" src="./src/images/skils-icons/VSC-icon.png" class="skils__item__icon"></img>
@@ -109,6 +113,10 @@
           <div class="skils__item__title">Figma</div>
         </div>
       </div>
+    </section>
+    <section class="projects section" id="projects">
+      <h2 class="projects__title section-title " >Projects</h2>
+      <img src="./src/images/arrowDown.svg" alt="prev-slide">
     </section>
   </body>
 </html>

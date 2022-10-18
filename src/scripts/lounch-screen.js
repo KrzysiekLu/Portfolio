@@ -54,7 +54,7 @@ export const launchScreen = () => {
     openButton();
     setTimeout(() => {
       launchScreenContainer.style.display = "none";
-    }, 2000);
+    }, 1200);
     writeSubtitle();
   });
 };
