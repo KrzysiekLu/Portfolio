@@ -1,6 +1,10 @@
+import { smoothScroll } from "./smoothScrollTo";
+
 export const mobileMenu = () => {
   const hamburgerButton = document.querySelector(".hamburger");
   const mobileMenu = document.querySelector(".menu");
+  const mobileMenuLinks = document.querySelectorAll(".menu__link");
+
   const menuOverlay = document.querySelector(".navbar__overlay");
 
   // change hamburger button
@@ -11,7 +15,6 @@ export const mobileMenu = () => {
   // show mobile menu
   const showMobileMenu = () => {
     mobileMenu.classList.toggle("menu--open");
-    console.log(mobileMenu);
   };
   //show overlay
   const showOverlay = () => {
@@ -24,9 +27,12 @@ export const mobileMenu = () => {
     showOverlay();
   });
 
-  //closing menu after clicking on a menu element
-  mobileMenu.childNodes.forEach((menulink) => {
-    menulink.addEventListener("click", () => {
+  //action after click on a navbar menu links
+  mobileMenuLinks.forEach((menulink) => {
+    menulink.addEventListener("click", (e) => {
+      e.preventDefault();
+      smoothScroll(e.target);
+
       changeHamburgerButton();
       showMobileMenu();
       showOverlay();

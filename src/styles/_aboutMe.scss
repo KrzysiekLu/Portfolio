@@ -2,6 +2,8 @@
   margin-top: 10rem;
   padding: 2rem 2.8rem;
   position: relative;
+  transform: translateY(5rem);
+  opacity: 0;
 
   &::after {
     content: "";
@@ -28,8 +30,7 @@
   &__title {
     font-size: 2.4rem;
     margin-bottom: 2.3rem;
-    transform: translateY(5rem);
-    opacity: 0;
+
     &::after {
       background-color: $about-me-accent;
     }
@@ -38,17 +39,10 @@
     max-width: 30rem;
     font-size: 1.6rem;
     line-height: 2.2rem;
-    transform: translateY(5rem);
-    opacity: 0;
+
     .paragraph {
       display: block;
       margin-bottom: 2rem;
     }
   }
-}
-
-.about-me--active {
-  transform: translateY(0);
-  transition: transform 1s ease, opacity 1s ease;
-  opacity: 1;
 }

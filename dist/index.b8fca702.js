@@ -536,10 +536,10 @@ var _lounchScreenJs = require("./lounch-screen.js");
 var _mobileNavMenuJs = require("./mobileNavMenu.js");
 var _writeSubtitleJs = require("./writeSubtitle.js");
 var _moveHeaderArrowJs = require("./moveHeaderArrow.js");
-var _moveToAboutmeJs = require("./moveToAboutme.js");
+var _smoothScrollToJs = require("./smoothScrollTo.js");
 var _observersJs = require("./observers.js");
 
-},{"./lounch-screen.js":"iuvBz","./mobileNavMenu.js":"6YDZm","./writeSubtitle.js":"5UTro","./moveHeaderArrow.js":"713a0","./moveToAboutme.js":"dT3fP","./observers.js":"5bz6Q"}],"iuvBz":[function(require,module,exports) {
+},{"./lounch-screen.js":"iuvBz","./mobileNavMenu.js":"6YDZm","./writeSubtitle.js":"5UTro","./moveHeaderArrow.js":"713a0","./observers.js":"5bz6Q","./smoothScrollTo.js":"lrzML"}],"iuvBz":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "launchScreen", ()=>launchScreen);
@@ -1429,9 +1429,11 @@ const writeSubtitle = ()=>{
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "mobileMenu", ()=>mobileMenu);
+var _smoothScrollTo = require("./smoothScrollTo");
 const mobileMenu = ()=>{
     const hamburgerButton = document.querySelector(".hamburger");
     const mobileMenu = document.querySelector(".menu");
+    const mobileMenuLinks = document.querySelectorAll(".menu__link");
     const menuOverlay = document.querySelector(".navbar__overlay");
     // change hamburger button
     const changeHamburgerButton = ()=>{
@@ -1440,7 +1442,6 @@ const mobileMenu = ()=>{
     // show mobile menu
     const showMobileMenu = ()=>{
         mobileMenu.classList.toggle("menu--open");
-        console.log(mobileMenu);
     };
     //show overlay
     const showOverlay = ()=>{
@@ -1451,9 +1452,11 @@ const mobileMenu = ()=>{
         showMobileMenu();
         showOverlay();
     });
-    //closing menu after clicking on a menu element
-    mobileMenu.childNodes.forEach((menulink)=>{
-        menulink.addEventListener("click", ()=>{
+    //action after click on a navbar menu links
+    mobileMenuLinks.forEach((menulink)=>{
+        menulink.addEventListener("click", (e)=>{
+            e.preventDefault();
+            (0, _smoothScrollTo.smoothScroll)(e.target);
             changeHamburgerButton();
             showMobileMenu();
             showOverlay();
@@ -1461,6 +1464,21 @@ const mobileMenu = ()=>{
     });
 };
 mobileMenu();
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./smoothScrollTo":"lrzML"}],"lrzML":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "smoothScroll", ()=>smoothScroll);
+const smoothScroll = (el)=>{
+    document.getElementById(el.dataset.destn).scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest"
+    });
+};
+document.querySelector(".main-header__btn").addEventListener("click", ()=>{
+    smoothScroll(document.querySelector(".main-header__btn"));
+});
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"713a0":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -1480,47 +1498,30 @@ const moveHeaderArrow = ()=>{
 };
 moveHeaderArrow();
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dT3fP":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "moveToAboutMe", ()=>moveToAboutMe);
-const moveToAboutMe = ()=>{
-    const headerButton = document.querySelector(".main-header__btn");
-    const aboutMeSection = document.querySelector(".about-me");
-    headerButton.addEventListener("click", ()=>{
-        aboutMeSection.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-            inline: "nearest"
-        });
-    });
-};
-moveToAboutMe();
-
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5bz6Q":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "observers", ()=>observers);
 const observers = ()=>{
     const sectionAboutMe = document.querySelector(".about-me");
-    const aboutMeTitle = document.querySelector(".about-me__title");
-    const aboutMeDescription = document.querySelector(".about-me__description");
-    const aboutMeElemensts = [
-        aboutMeTitle,
-        aboutMeDescription
-    ];
+    const skilsSection = document.querySelector(".skils");
+    const sections = document.querySelectorAll(".section");
+    console.log(sections);
     const sectionObserverOptions = {
-        rootMargin: "0px 0px -100px 0px"
+        rootMargin: "-200px 0px -100px 0px"
     };
-    const showSection = (elemetns)=>{
-        elemetns.forEach((element)=>{
-            element.classList.add("about-me--active");
-        });
+    const showSection = (obsSection)=>{
+        console.log(obsSection);
+        obsSection[0].target.classList.add("section--active");
     };
     const sectionObserver = new IntersectionObserver((e)=>{
-        e[0].isIntersecting && showSection(aboutMeElemensts);
+        e[0].isIntersecting && showSection(e);
     }, sectionObserverOptions);
-    sectionObserver.observe(sectionAboutMe);
+    sections.forEach((section)=>{
+        sectionObserver.observe(section);
+    });
+// sectionObserver.observe(sectionAboutMe);
+// sectionObserver.observe(skilsSection);
 };
 observers();
 

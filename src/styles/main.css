@@ -22,23 +22,6 @@ button {
   font-family: "Roboto Mono", monospace;
 }
 
-.section-title {
-  font-size: 2.4rem;
-  margin-bottom: 2.3rem;
-  position: relative;
-  display: inline-block;
-}
-.section-title::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 50%;
-  bottom: 0%;
-  left: 10%;
-  display: block;
-  z-index: -1;
-}
-
 .launch-screen {
   width: 100%;
   height: 100vh;
@@ -112,25 +95,21 @@ button {
   border-radius: 0 2rem 2rem 0;
   transition: 0.5s transform ease;
 }
+.navbar__menu__item:first-child,
+.navbar .menu__item:first-child {
+  margin-top: 3rem;
+}
 .navbar__menu__link,
 .navbar .menu__link {
   width: 100%;
-  padding: 1.5rem;
-  margin-bottom: 4rem;
-}
-.navbar__menu__link:first-child,
-.navbar .menu__link:first-child {
-  margin-top: 5.6rem;
+  display: block;
+  padding: 2rem 0 2rem 1.5rem;
 }
 .navbar__menu__link:hover,
 .navbar .menu__link:hover {
   transition: background-color 0.2s ease-in, color 0.2s ease;
   background-color: #434343;
   color: #d9d9d9;
-}
-.navbar__menu__items,
-.navbar .menu__items {
-  padding-left: 1.5rem;
 }
 .navbar .menu--open {
   transform: translateX(15rem);
@@ -243,6 +222,8 @@ button {
   margin-top: 10rem;
   padding: 2rem 2.8rem;
   position: relative;
+  transform: translateY(5rem);
+  opacity: 0;
 }
 .about-me::after {
   content: "";
@@ -269,8 +250,6 @@ button {
 .about-me__title {
   font-size: 2.4rem;
   margin-bottom: 2.3rem;
-  transform: translateY(5rem);
-  opacity: 0;
 }
 .about-me__title::after {
   background-color: rgba(243, 187, 77, 0.56);
@@ -279,22 +258,17 @@ button {
   max-width: 30rem;
   font-size: 1.6rem;
   line-height: 2.2rem;
-  transform: translateY(5rem);
-  opacity: 0;
 }
 .about-me__description .paragraph {
   display: block;
   margin-bottom: 2rem;
 }
 
-.about-me--active {
-  transform: translateY(0);
-  transition: transform 1s ease, opacity 1s ease;
-  opacity: 1;
-}
-
 .skils {
-  padding: 2rem 2.8rem;
+  padding: 0 2.8rem;
+  transform: translateY(5rem);
+  opacity: 0;
+  margin-bottom: 10rem;
 }
 .skils__title::after {
   background-color: rgb(96, 224, 233);
@@ -319,4 +293,28 @@ button {
 }
 .skils__item__title {
   font-size: 1.6rem;
+}
+
+.section-title {
+  font-size: 2.4rem;
+  margin-bottom: 2.3rem;
+  position: relative;
+  display: inline-block;
+}
+.section-title::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  bottom: 0%;
+  left: 10%;
+  display: block;
+  z-index: -1;
+}
+
+.section--active {
+  padding-top: 7rem;
+  transform: translateY(0);
+  transition: transform 1s ease, opacity 1s ease;
+  opacity: 1;
 }/*# sourceMappingURL=main.css.map */

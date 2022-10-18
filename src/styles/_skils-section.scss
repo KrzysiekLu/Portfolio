@@ -1,5 +1,8 @@
 .skils {
-  padding: 2rem 2.8rem;
+  padding: 0 2.8rem;
+  transform: translateY(5rem);
+  opacity: 0;
+  margin-bottom: 10rem;
   &__title {
     &::after {
       background-color: $skils-accent;

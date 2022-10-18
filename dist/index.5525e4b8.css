@@ -22,24 +22,6 @@ button {
   font-family: Roboto Mono, monospace;
 }
 
-.section-title {
-  margin-bottom: 2.3rem;
-  font-size: 2.4rem;
-  display: inline-block;
-  position: relative;
-}
-
-.section-title:after {
-  content: "";
-  width: 100%;
-  height: 50%;
-  z-index: -1;
-  display: block;
-  position: absolute;
-  bottom: 0%;
-  left: 10%;
-}
-
 .launch-screen {
   width: 100%;
   height: 100vh;
@@ -118,24 +100,20 @@ button {
   left: -15rem;
 }
 
-.navbar__menu__link, .navbar .menu__link {
-  width: 100%;
-  margin-bottom: 4rem;
-  padding: 1.5rem;
+.navbar__menu__item:first-child, .navbar .menu__item:first-child {
+  margin-top: 3rem;
 }
 
-.navbar__menu__link:first-child, .navbar .menu__link:first-child {
-  margin-top: 5.6rem;
+.navbar__menu__link, .navbar .menu__link {
+  width: 100%;
+  padding: 2rem 0 2rem 1.5rem;
+  display: block;
 }
 
 .navbar__menu__link:hover, .navbar .menu__link:hover {
   color: #d9d9d9;
   background-color: #434343;
   transition: background-color .2s ease-in, color .2s;
-}
-
-.navbar__menu__items, .navbar .menu__items {
-  padding-left: 1.5rem;
 }
 
 .navbar .menu--open {
@@ -259,9 +237,11 @@ button {
 }
 
 .about-me {
+  opacity: 0;
   margin-top: 10rem;
   padding: 2rem 2.8rem;
   position: relative;
+  transform: translateY(5rem);
 }
 
 .about-me:after {
@@ -289,10 +269,8 @@ button {
 }
 
 .about-me__title {
-  opacity: 0;
   margin-bottom: 2.3rem;
   font-size: 2.4rem;
-  transform: translateY(5rem);
 }
 
 .about-me__title:after {
@@ -301,10 +279,8 @@ button {
 
 .about-me__description {
   max-width: 30rem;
-  opacity: 0;
   font-size: 1.6rem;
   line-height: 2.2rem;
-  transform: translateY(5rem);
 }
 
 .about-me__description .paragraph {
@@ -312,14 +288,11 @@ button {
   display: block;
 }
 
-.about-me--active {
-  opacity: 1;
-  transition: transform 1s, opacity 1s;
-  transform: translateY(0);
-}
-
 .skils {
-  padding: 2rem 2.8rem;
+  opacity: 0;
+  margin-bottom: 10rem;
+  padding: 0 2.8rem;
+  transform: translateY(5rem);
 }
 
 .skils__title:after {
@@ -349,6 +322,31 @@ button {
 
 .skils__item__title {
   font-size: 1.6rem;
+}
+
+.section-title {
+  margin-bottom: 2.3rem;
+  font-size: 2.4rem;
+  display: inline-block;
+  position: relative;
+}
+
+.section-title:after {
+  content: "";
+  width: 100%;
+  height: 50%;
+  z-index: -1;
+  display: block;
+  position: absolute;
+  bottom: 0%;
+  left: 10%;
+}
+
+.section--active {
+  opacity: 1;
+  padding-top: 7rem;
+  transition: transform 1s, opacity 1s;
+  transform: translateY(0);
 }
 
 /*# sourceMappingURL=index.5525e4b8.css.map */

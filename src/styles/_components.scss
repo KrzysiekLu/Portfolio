@@ -15,3 +15,12 @@
     z-index: -1;
   }
 }
+
+// class added when section is observed
+.section--active {
+  padding-top: 7rem;
+
+  transform: translateY(0);
+  transition: transform 1s ease, opacity 1s ease;
+  opacity: 1;
+}
