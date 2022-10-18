@@ -308,6 +308,10 @@ button {
   display: flex;
 }
 
+.skils__item:first-child, .skils__item:nth-child(2) {
+  text-transform: uppercase;
+}
+
 .skils__item__icon {
   width: 50px;
   margin-right: 2rem;

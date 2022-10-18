@@ -18,6 +18,12 @@
     display: flex;
     align-items: center;
     margin-bottom: 3rem;
+    &:first-child {
+      text-transform: uppercase;
+    }
+    &:nth-child(2) {
+      text-transform: uppercase;
+    }
     &__icon {
       width: 50px;
       margin-right: 2rem;

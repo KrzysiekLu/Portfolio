@@ -280,6 +280,12 @@ button {
   align-items: center;
   margin-bottom: 3rem;
 }
+.skils__item:first-child {
+  text-transform: uppercase;
+}
+.skils__item:nth-child(2) {
+  text-transform: uppercase;
+}
 .skils__item__icon {
   width: 50px;
   margin-right: 2rem;
