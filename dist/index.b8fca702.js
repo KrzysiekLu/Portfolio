@@ -1503,25 +1503,23 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "observers", ()=>observers);
 const observers = ()=>{
-    const sectionAboutMe = document.querySelector(".about-me");
-    const skilsSection = document.querySelector(".skils");
     const sections = document.querySelectorAll(".section");
     console.log(sections);
     const sectionObserverOptions = {
-        rootMargin: "-200px 0px -100px 0px"
+        rootMargin: "-200px 0px -150px 0px"
     };
+    // function adding a class to show sections
     const showSection = (obsSection)=>{
         console.log(obsSection);
         obsSection[0].target.classList.add("section--active");
     };
+    // observer for fadein section
     const sectionObserver = new IntersectionObserver((e)=>{
         e[0].isIntersecting && showSection(e);
     }, sectionObserverOptions);
     sections.forEach((section)=>{
         sectionObserver.observe(section);
     });
-// sectionObserver.observe(sectionAboutMe);
-// sectionObserver.observe(skilsSection);
 };
 observers();
 

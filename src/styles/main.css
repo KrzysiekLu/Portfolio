@@ -219,11 +219,7 @@ button {
 }
 
 .about-me {
-  margin-top: 10rem;
-  padding: 2rem 2.8rem;
   position: relative;
-  transform: translateY(5rem);
-  opacity: 0;
 }
 .about-me::after {
   content: "";
@@ -265,9 +261,6 @@ button {
 }
 
 .skils {
-  padding: 0 2.8rem;
-  transform: translateY(5rem);
-  opacity: 0;
   margin-bottom: 10rem;
 }
 .skils__title::after {
@@ -310,6 +303,12 @@ button {
   left: 10%;
   display: block;
   z-index: -1;
+}
+
+.section {
+  padding: 2rem 2.8rem;
+  opacity: 0;
+  transform: translateY(5rem);
 }
 
 .section--active {

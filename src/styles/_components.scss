@@ -16,10 +16,16 @@
   }
 }
 
+//common styles to every section
+.section {
+  padding: 2rem 2.8rem;
+  opacity: 0;
+  transform: translateY(5rem);
+}
+
 // class added when section is observed
 .section--active {
   padding-top: 7rem;
-
   transform: translateY(0);
   transition: transform 1s ease, opacity 1s ease;
   opacity: 1;
