@@ -39,7 +39,7 @@
             <li class="menu__item"><a data-destn="skils-section" class="menu__link" tabindex="-1" href="#skils-section">Skils</a></li> 
          
           
-            <li class="menu__item"> <a class="menu__link" tabindex="-1" href="#">Projects</a></li> 
+            <li class="menu__item"> <a data-destn="projects-section" class="menu__link" tabindex="-1" href="#project-section">Projects</a></li> 
          
           
              <li class="menu__item"><a class="menu__link" tabindex="-1" href="#">Contact</a></li> 
@@ -108,18 +108,78 @@
         </div>
       </div>
     </section>
-    <section class="projects section" id="projects">
+    <section class="projects section" id="projects-section">
       <h2 class="projects__title section-title ">Projects</h2>
-      <div id="my-keen-slider" class="keen-slider">
-        <a href="https://www.google.com/"> <div class="keen-slider__slide number-slide1">1</div></a>
-       
-        <div class="keen-slider__slide number-slide2">2</div>
-        <div class="keen-slider__slide number-slide3">3</div>
-        <div class="keen-slider__slide number-slide4">4</div>
-        <div class="keen-slider__slide number-slide5">5</div>
-        <div class="keen-slider__slide number-slide6">6</div>
+      <div class="projects__container">
+ <div id="my-keen-slider" class="keen-slider">
+         <div class="keen-slider__slide number-slide1">
+          <img src="/AdviceGeneratot.f9d951b3.png" alt="">
+          </div>
+         <div class="keen-slider__slide number-slide2">
+          <img src="/NoughtsAndCrosses.3826698d.jpg" alt="">
+          </div>
+         <div class="keen-slider__slide number-slide3">
+          <img src="/Form.339cc5b4.jpg" alt="">
+          </div>
+         <div class="keen-slider__slide number-slide4">
+          <img src="/CountriesCards.428cbbf4.jpg" alt="">
+          </div>
       </div>
-      
+      </div>
+      <div class="project-info">
+        <div class="project-info__wraper" data-index="0">
+          <h3 class="name">Advice generator</h3>
+          <p class="describe">An application that generates random tips from rest API.  </p>
+          <div class="link-wraper">
+              <a href="#" class="github-link project-link"> 
+                <img class="github-link__logo" src="/GitHub.a1de5033.png" alt="git hub"> GitHub
+              </a>
+              <a href="#" class="liveSite-link project-link">
+                <img class="www-link__logo " src="/wwwLogo.bbcdf8c4.png" alt="Live site"> 
+                Live site
+              </a>
+          </div>
+        </div>
+        <div class="project-info__wraper" data-index="1">
+          <h3 class="name">Noughts and crosses</h3>
+          <p class="describe">Simple game written in vanilla js.  </p>
+          <div class="link-wraper">
+              <a href="#" class="github-link project-link"> 
+                <img class="github-link__logo" src="/GitHub.a1de5033.png" alt="git hub"> GitHub
+              </a>
+              <a href="#" class="liveSite-link project-link">
+                <img class="www-link__logo " src="/wwwLogo.bbcdf8c4.png" alt="Live site"> 
+                Live site
+              </a>
+          </div>
+        </div>
+        <div class="project-info__wraper" data-index="2">
+          <h3 class="name">Country information cards</h3>
+          <p class="describe">Project that shows basic information about countries and their neighbors</p>
+            <div class="link-wraper">
+              <a href="#" class="github-link project-link"> 
+                <img class="github-link__logo" src="/GitHub.a1de5033.png" alt="git hub"> GitHub
+              </a>
+              <a href="#" class="liveSite-link project-link">
+                <img class="www-link__logo " src="/wwwLogo.bbcdf8c4.png" alt="Live site"> 
+                Live site
+              </a>
+          </div>
+        </div>
+        <div class="project-info__wraper" data-index="3">
+          <h3 class="name">Contact form</h3>
+          <p class="describe">Validated contact form using a plugin to enter and validate international phone numbers.</p>
+          <div class="link-wraper">
+            <a href="#" class="github-link project-link"> 
+              <img class="github-link__logo" src="/GitHub.a1de5033.png" alt="git hub"> GitHub
+            </a>
+            <a href="#" class="liveSite-link project-link">
+              <img class="www-link__logo " src="/wwwLogo.bbcdf8c4.png" alt="Live site"> 
+              Live site
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
   </body>
 </html>

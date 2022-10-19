@@ -1537,6 +1537,7 @@ var _keenSliderCjsDefault = parcelHelpers.interopDefault(_keenSliderCjs);
 const projectsSlider = ()=>{
     function navigation(slider) {
         let wrapper, dots, arrowLeft, arrowRight;
+        const projectsInfo = document.querySelectorAll(".project-info__wraper");
         function markup(remove) {
             wrapperMarkup(remove);
             dotMarkup(remove);
@@ -1592,12 +1593,18 @@ const projectsSlider = ()=>{
             });
             wrapper.appendChild(dots);
         }
+        const updateDescription = (index)=>{
+            projectsInfo.forEach((el)=>{
+                el.classList.remove("project-info__wraper--show");
+            });
+            projectsInfo[index].classList.add("project-info__wraper--show");
+        };
         function updateClasses() {
             var slide = slider.track.details.rel;
             slide === 0 ? arrowLeft.classList.add("arrow--disabled") : arrowLeft.classList.remove("arrow--disabled");
             slide === slider.track.details.slides.length - 1 ? arrowRight.classList.add("arrow--disabled") : arrowRight.classList.remove("arrow--disabled");
             Array.from(dots.children).forEach(function(dot, idx) {
-                idx === slide ? (dot.classList.add("dot--active"), console.log(idx)) : dot.classList.remove("dot--active");
+                idx === slide ? (dot.classList.add("dot--active"), updateDescription(idx)) : dot.classList.remove("dot--active");
             });
         }
         slider.on("created", ()=>{
@@ -1623,7 +1630,7 @@ const projectsSlider = ()=>{
 };
 projectsSlider();
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../../node_modules/keen-slider/keen-slider.cjs":"jV6nQ"}],"jV6nQ":[function(require,module,exports) {
+},{"../../node_modules/keen-slider/keen-slider.cjs":"jV6nQ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jV6nQ":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: !0

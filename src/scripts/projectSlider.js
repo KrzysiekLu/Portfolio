@@ -3,6 +3,7 @@ import KeenSlider from "../../node_modules/keen-slider/keen-slider.cjs";
 export const projectsSlider = () => {
   function navigation(slider) {
     let wrapper, dots, arrowLeft, arrowRight;
+    const projectsInfo = document.querySelectorAll(".project-info__wraper");
 
     function markup(remove) {
       wrapperMarkup(remove);
@@ -66,6 +67,13 @@ export const projectsSlider = () => {
       wrapper.appendChild(dots);
     }
 
+    const updateDescription = (index) => {
+      projectsInfo.forEach((el) => {
+        el.classList.remove("project-info__wraper--show");
+      });
+      projectsInfo[index].classList.add("project-info__wraper--show");
+    };
+
     function updateClasses() {
       var slide = slider.track.details.rel;
       slide === 0
@@ -76,7 +84,7 @@ export const projectsSlider = () => {
         : arrowRight.classList.remove("arrow--disabled");
       Array.from(dots.children).forEach(function (dot, idx) {
         idx === slide
-          ? (dot.classList.add("dot--active"), console.log(idx))
+          ? (dot.classList.add("dot--active"), updateDescription(idx))
           : dot.classList.remove("dot--active");
       });
     }

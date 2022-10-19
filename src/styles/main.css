@@ -27,6 +27,38 @@ button {
   cursor: pointer;
 }
 
+.section-title {
+  font-size: 2.4rem;
+  margin-bottom: 2.3rem;
+  position: relative;
+  display: inline-block;
+}
+.section-title::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  bottom: 0%;
+  left: 10%;
+  display: block;
+  z-index: -1;
+}
+
+.section {
+  padding: 2rem 2.8rem;
+  opacity: 0;
+  transform: translateY(5rem);
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.section--active {
+  padding-top: 7rem;
+  transform: translateY(0);
+  transition: transform 1s ease, opacity 1s ease;
+  opacity: 1;
+}
+
 .launch-screen {
   width: 100%;
   height: 100vh;
@@ -265,9 +297,6 @@ button {
   margin-bottom: 2rem;
 }
 
-.skils {
-  margin-bottom: 10rem;
-}
 .skils__title::after {
   background-color: rgb(96, 224, 233);
 }
@@ -299,43 +328,87 @@ button {
   font-size: 1.6rem;
 }
 
+.projects {
+  margin-bottom: 30rem;
+}
+.projects__title:after {
+  background-color: rgb(171, 238, 243);
+}
+.projects__container {
+  display: flex;
+  justify-content: center;
+}
+
+.project-info {
+  position: relative;
+  margin-top: 2rem;
+  text-align: center;
+}
+.project-info__wraper {
+  position: absolute;
+  opacity: 0;
+  transition: 1s opacity ease 0.2;
+  width: 100%;
+}
+.project-info__wraper--show {
+  z-index: 2;
+  opacity: 1;
+  transition: 1s opacity ease;
+}
+.project-info .name {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.project-info .describe {
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+}
+.project-info .link-wraper {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.6rem;
+}
+.project-info .link-wraper .project-link {
+  display: flex;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 2.5rem;
+  padding: 0.2rem;
+  padding-right: 2rem;
+  height: 100%;
+  transition: 0.2s background ease;
+}
+.project-info .link-wraper .project-link:hover {
+  background-color: rgb(236, 236, 236);
+  box-shadow: 0rem 0.2rem 0.5rem -0.2rem black;
+}
+.project-info .link-wraper .project-link img {
+  width: 4rem;
+  margin-right: 0.5rem;
+}
+
+.navigation-wrapper {
+  max-width: 266px;
+}
+
+.keen-slider {
+  max-width: 266px;
+}
+
 [class^=number-slide],
 [class*=" number-slide"] {
-  background: grey;
+  height: 40rem;
+  max-width: 266px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 50px;
-  color: #fff;
-  font-weight: 500;
-  height: 300px;
-  max-height: 100vh;
+  max-width: 266px;
 }
-
-.number-slide2 {
-  background: rgb(255, 75, 64);
-  background: linear-gradient(128deg, rgb(255, 154, 63) 0%, rgb(255, 75, 64) 100%);
-}
-
-.number-slide3 {
-  background: rgb(182, 255, 64);
-  background: linear-gradient(128deg, rgb(182, 255, 64) 0%, rgb(63, 255, 71) 100%);
-  background: linear-gradient(128deg, rgb(189, 255, 83) 0%, rgb(43, 250, 82) 100%);
-}
-
-.number-slide4 {
-  background: rgb(64, 255, 242);
-  background: linear-gradient(128deg, rgb(64, 255, 242) 0%, rgb(63, 188, 255) 100%);
-}
-
-.number-slide5 {
-  background: rgb(255, 64, 156);
-  background: linear-gradient(128deg, rgb(255, 64, 156) 0%, rgb(255, 63, 63) 100%);
-}
-
-.number-slide6 {
-  background: rgb(64, 76, 255);
-  background: linear-gradient(128deg, rgb(64, 76, 255) 0%, rgb(174, 63, 255) 100%);
+[class^=number-slide] img,
+[class*=" number-slide"] img {
+  min-width: 100%;
+  max-height: 100%;
 }
 
 .navigation-wrapper {
@@ -396,36 +469,4 @@ button {
 
 .arrow--disabled.arrow--right {
   background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' fill='grey' viewBox='0 0 24 24' %3E%3Cpath d='M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z'%3E%3C/path%3E%3C/svg%3E");
-}
-
-.section-title {
-  font-size: 2.4rem;
-  margin-bottom: 2.3rem;
-  position: relative;
-  display: inline-block;
-}
-.section-title::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 50%;
-  bottom: 0%;
-  left: 10%;
-  display: block;
-  z-index: -1;
-}
-
-.section {
-  padding: 2rem 2.8rem;
-  opacity: 0;
-  transform: translateY(5rem);
-  max-width: 50rem;
-  margin: 0 auto;
-}
-
-.section--active {
-  padding-top: 7rem;
-  transform: translateY(0);
-  transition: transform 1s ease, opacity 1s ease;
-  opacity: 1;
 }/*# sourceMappingURL=main.css.map */
