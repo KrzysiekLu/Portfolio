@@ -453,16 +453,15 @@ button {
   margin-right: .5rem;
 }
 
-.navigation-wrapper, .keen-slider {
-  max-width: 266px;
+.keen-slider {
+  max-width: 260px;
 }
 
 [class^="number-slide"], [class*=" number-slide"] {
-  height: 40rem;
-  max-width: 266px;
-  max-width: 266px;
+  max-width: 260px;
   justify-content: center;
   align-items: center;
+  padding: .1rem;
   display: flex;
 }
 

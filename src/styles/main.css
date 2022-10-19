@@ -389,22 +389,17 @@ button {
   margin-right: 0.5rem;
 }
 
-.navigation-wrapper {
-  max-width: 266px;
-}
-
 .keen-slider {
-  max-width: 266px;
+  max-width: 260px;
 }
 
 [class^=number-slide],
 [class*=" number-slide"] {
-  height: 40rem;
-  max-width: 266px;
+  max-width: 260px;
+  padding: 0.1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 266px;
 }
 [class^=number-slide] img,
 [class*=" number-slide"] img {
