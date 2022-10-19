@@ -58,4 +58,4 @@ export const launchScreen = () => {
     writeSubtitle();
   });
 };
-launchScreen();
+// launchScreen();

@@ -2,17 +2,22 @@ export const observers = () => {
   const sections = document.querySelectorAll(".section");
 
   const sectionObserverOptions = {
-    rootMargin: "-200px 0px -150px 0px",
+    rootMargin: "0px 0px -100px 0px",
+    threshold: 0.5,
   };
 
   // function adding a class to show sections
   const showSection = (obsSection) => {
-    obsSection[0].target.classList.add("section--active");
+    obsSection.target.classList.add("section--active");
   };
 
   // observer for fadein section
   const sectionObserver = new IntersectionObserver((e) => {
-    e[0].isIntersecting ? showSection(e) : false;
+    e.forEach((e) => {
+      e.isIntersecting ? showSection(e) : false;
+    });
+
+    // showSection(e);
   }, sectionObserverOptions);
 
   sections.forEach((section) => {

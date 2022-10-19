@@ -589,8 +589,7 @@ const launchScreen = ()=>{
         }, 1200);
         (0, _writeSubtitleJs.writeSubtitle)();
     });
-};
-launchScreen();
+}; // launchScreen();
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./writeSubtitle.js":"5UTro"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
@@ -1512,15 +1511,19 @@ parcelHelpers.export(exports, "observers", ()=>observers);
 const observers = ()=>{
     const sections = document.querySelectorAll(".section");
     const sectionObserverOptions = {
-        rootMargin: "-200px 0px -150px 0px"
+        rootMargin: "0px 0px -100px 0px",
+        threshold: 0.5
     };
     // function adding a class to show sections
     const showSection = (obsSection)=>{
-        obsSection[0].target.classList.add("section--active");
+        obsSection.target.classList.add("section--active");
     };
     // observer for fadein section
     const sectionObserver = new IntersectionObserver((e)=>{
-        e[0].isIntersecting && showSection(e);
+        e.forEach((e)=>{
+            e.isIntersecting && showSection(e);
+        });
+    // showSection(e);
     }, sectionObserverOptions);
     sections.forEach((section)=>{
         sectionObserver.observe(section);

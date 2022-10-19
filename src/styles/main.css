@@ -256,6 +256,7 @@ button {
 }
 
 .about-me {
+  margin-top: 10rem;
   position: relative;
 }
 .about-me::after {
