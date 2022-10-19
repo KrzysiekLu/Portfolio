@@ -330,6 +330,7 @@ button {
 
 .projects {
   margin-bottom: 30rem;
+  padding-top: 0;
 }
 .projects__title:after {
   background-color: rgb(171, 238, 243);

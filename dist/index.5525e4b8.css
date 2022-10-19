@@ -385,6 +385,7 @@ button {
 
 .projects {
   margin-bottom: 30rem;
+  padding-top: 0;
 }
 
 .projects__title:after {
