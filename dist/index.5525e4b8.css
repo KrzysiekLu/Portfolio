@@ -303,7 +303,7 @@ button {
 }
 
 .about-me {
-  margin-top: 10rem;
+  margin-top: 0;
   position: relative;
 }
 
@@ -405,9 +405,14 @@ button {
 }
 
 .project-info__wraper {
+  min-height: 20rem;
   opacity: 0;
   transition: 1s opacity ease .2;
   width: 100%;
+  border: 2px solid red;
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
   position: absolute;
 }
 
@@ -459,7 +464,7 @@ button {
 }
 
 [class^="number-slide"], [class*=" number-slide"] {
-  max-width: 260px;
+  height: 35rem;
   justify-content: center;
   align-items: center;
   padding: .1rem;
@@ -467,17 +472,17 @@ button {
 }
 
 [class^="number-slide"] img, [class*=" number-slide"] img {
-  min-width: 100%;
   max-height: 100%;
+  max-width: 100%;
 }
 
 .navigation-wrapper {
+  max-width: 100%;
   position: relative;
 }
 
 .dots {
   justify-content: center;
-  padding: 10px 0;
   display: flex;
 }
 

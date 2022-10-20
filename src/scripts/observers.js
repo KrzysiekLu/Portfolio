@@ -2,7 +2,7 @@ export const observers = () => {
   const sections = document.querySelectorAll(".section");
 
   const sectionObserverOptions = {
-    rootMargin: "0px 0px -100px 0px",
+    rootMargin: "0px 0px 0px 0px",
     threshold: 0.5,
   };
 
