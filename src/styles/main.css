@@ -45,7 +45,7 @@ button {
 }
 
 .section {
-  padding: 2rem 2.8rem;
+  padding: 0 2.8rem;
   opacity: 0;
   transform: translateY(5rem);
   max-width: 50rem;
@@ -331,7 +331,6 @@ button {
 
 .projects {
   margin-bottom: 30rem;
-  padding-top: 0;
 }
 .projects__title:after {
   background-color: rgb(171, 238, 243);
@@ -340,43 +339,41 @@ button {
   display: flex;
   justify-content: center;
 }
-
-.project-info {
+.projects .project-info {
   position: relative;
   margin-top: 2rem;
   text-align: center;
-}
-.project-info__wraper {
-  min-height: 20rem;
-  position: absolute;
-  border: 2px solid red;
+  min-height: 18rem;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  align-items: flex-end;
+  justify-content: center;
+}
+.projects .project-info__wraper {
+  top: 0;
+  position: absolute;
   opacity: 0;
   transition: 1s opacity ease 0.2;
-  width: 100%;
 }
-.project-info__wraper--show {
+.projects .project-info__wraper--show {
   z-index: 2;
   opacity: 1;
   transition: 1s opacity ease;
 }
-.project-info .name {
+.projects .project-info .name {
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
-.project-info .describe {
+.projects .project-info .describe {
   font-size: 1.6rem;
   margin-bottom: 3rem;
 }
-.project-info .link-wraper {
+.projects .project-info .link-wraper {
   min-width: 100%;
   display: flex;
   justify-content: space-around;
   font-size: 1.6rem;
 }
-.project-info .link-wraper .project-link {
+.projects .project-info .link-wraper .project-link {
   display: flex;
   align-items: center;
   border: 2px solid black;
@@ -386,11 +383,11 @@ button {
   height: 100%;
   transition: 0.2s background ease;
 }
-.project-info .link-wraper .project-link:hover {
+.projects .project-info .link-wraper .project-link:hover {
   background-color: rgb(236, 236, 236);
   box-shadow: 0rem 0.2rem 0.5rem -0.2rem black;
 }
-.project-info .link-wraper .project-link img {
+.projects .project-info .link-wraper .project-link img {
   width: 4rem;
   margin-right: 0.5rem;
 }
@@ -421,6 +418,7 @@ button {
 .dots {
   display: flex;
   justify-content: center;
+  margin-top: 1rem;
 }
 
 .dot {

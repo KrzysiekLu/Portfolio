@@ -1537,6 +1537,20 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "projectsSlider", ()=>projectsSlider);
 var _keenSliderCjs = require("../../node_modules/keen-slider/keen-slider.cjs");
 var _keenSliderCjsDefault = parcelHelpers.interopDefault(_keenSliderCjs);
+const linksLiveSite = [
+    " https://advice-generator-krzysiek.netlify.app",
+    "https://noughts-and-crosses-kl.netlify.app/",
+    "https://ornate-raindrop-671bf8.netlify.app/",
+    "https://dazzling-rugelach-d5a483.netlify.app/", 
+];
+const linksGitHub = [
+    "https://github.com/KrzysiekLu/Advice-Generator-FrontEndMentor",
+    "https://github.com/KrzysiekLu/NOUGHTS-AND-CROSSES",
+    "https://github.com/KrzysiekLu/Form",
+    "https://github.com/KrzysiekLu/Country-information-cards", 
+];
+const projectLinks = document.querySelectorAll(".project-link");
+console.log(projectLinks);
 const projectsSlider = ()=>{
     function navigation(slider) {
         let wrapper, dots, arrowLeft, arrowRight;
@@ -1602,12 +1616,16 @@ const projectsSlider = ()=>{
             });
             projectsInfo[index].classList.add("project-info__wraper--show");
         };
+        const updateLinks = (index)=>{
+            projectLinks[0].setAttribute("href", linksGitHub[index]);
+            projectLinks[1].setAttribute("href", linksLiveSite[index]);
+        };
         function updateClasses() {
             var slide = slider.track.details.rel;
             slide === 0 ? arrowLeft.classList.add("arrow--disabled") : arrowLeft.classList.remove("arrow--disabled");
             slide === slider.track.details.slides.length - 1 ? arrowRight.classList.add("arrow--disabled") : arrowRight.classList.remove("arrow--disabled");
             Array.from(dots.children).forEach(function(dot, idx) {
-                idx === slide ? (dot.classList.add("dot--active"), updateDescription(idx)) : dot.classList.remove("dot--active");
+                idx === slide ? (dot.classList.add("dot--active"), updateDescription(idx), updateLinks(idx)) : dot.classList.remove("dot--active");
             });
         }
         slider.on("created", ()=>{

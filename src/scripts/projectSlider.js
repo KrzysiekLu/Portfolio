@@ -1,5 +1,20 @@
 import KeenSlider from "../../node_modules/keen-slider/keen-slider.cjs";
 
+const linksLiveSite = [
+  " https://advice-generator-krzysiek.netlify.app",
+  "https://noughts-and-crosses-kl.netlify.app/",
+  "https://ornate-raindrop-671bf8.netlify.app/",
+  "https://dazzling-rugelach-d5a483.netlify.app/",
+];
+const linksGitHub = [
+  "https://github.com/KrzysiekLu/Advice-Generator-FrontEndMentor",
+  "https://github.com/KrzysiekLu/NOUGHTS-AND-CROSSES",
+  "https://github.com/KrzysiekLu/Form",
+  "https://github.com/KrzysiekLu/Country-information-cards",
+];
+const projectLinks = document.querySelectorAll(".project-link");
+console.log(projectLinks);
+
 export const projectsSlider = () => {
   function navigation(slider) {
     let wrapper, dots, arrowLeft, arrowRight;
@@ -73,6 +88,10 @@ export const projectsSlider = () => {
       });
       projectsInfo[index].classList.add("project-info__wraper--show");
     };
+    const updateLinks = (index) => {
+      projectLinks[0].setAttribute("href", linksGitHub[index]);
+      projectLinks[1].setAttribute("href", linksLiveSite[index]);
+    };
 
     function updateClasses() {
       var slide = slider.track.details.rel;
@@ -84,7 +103,9 @@ export const projectsSlider = () => {
         : arrowRight.classList.remove("arrow--disabled");
       Array.from(dots.children).forEach(function (dot, idx) {
         idx === slide
-          ? (dot.classList.add("dot--active"), updateDescription(idx))
+          ? (dot.classList.add("dot--active"),
+            updateDescription(idx),
+            updateLinks(idx))
           : dot.classList.remove("dot--active");
       });
     }
