@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #eeeded;
+}
+
 html {
   font-size: 62.5%;
   font-family: "Roboto Mono", monospace;
@@ -59,6 +63,23 @@ button {
   opacity: 1;
 }
 
+.button {
+  display: block;
+  font-size: 1.6rem;
+  min-width: 15rem;
+  min-height: 4rem;
+  align-self: center;
+  border: 2px solid #434343;
+  border-radius: 2rem;
+  margin-top: 4rem;
+  box-shadow: 0 0.5rem 1rem -0.5rem rgb(60, 60, 60);
+  transition: 0.3s transform ease-in-out, 0.3s box-shadow ease-in-out;
+}
+.button:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 1.5rem 1.5rem -1rem rgb(145, 145, 145);
+}
+
 .launch-screen {
   width: 100%;
   height: 100vh;
@@ -69,7 +90,7 @@ button {
   z-index: 3;
 }
 .launch-screen__curtain {
-  background-color: #d9d9d9;
+  background-color: #eeeded;
   height: 100%;
   width: 50%;
 }
@@ -95,7 +116,7 @@ button {
   border: none;
   border-radius: 50%;
   padding: 3rem;
-  background-color: #d9d9d9;
+  background-color: #eeeded;
   border-radius: 50%;
   background: linear-gradient(145deg, #f0f0f0, #cacaca);
   box-shadow: 15px 15px 30px #8d8d8d, -15px -15px 30px #ffffff;
@@ -128,7 +149,7 @@ button {
   width: 15rem;
   height: 100%;
   font-size: 1.6rem;
-  background-color: #d9d9d9;
+  background-color: #eeeded;
   border-radius: 0 2rem 2rem 0;
   transition: 0.5s transform ease;
 }
@@ -146,7 +167,7 @@ button {
 .navbar .menu__link:hover {
   transition: background-color 0.2s ease-in, color 0.2s ease;
   background-color: #434343;
-  color: #d9d9d9;
+  color: #eeeded;
 }
 .navbar .menu--open {
   transform: translateX(15rem);
@@ -229,22 +250,6 @@ button {
   font-weight: 600;
   height: 4.6rem;
   text-align: center;
-}
-.main-header__btn {
-  display: block;
-  font-size: 1.6rem;
-  min-width: 15rem;
-  min-height: 4rem;
-  align-self: center;
-  border: 2px solid #434343;
-  border-radius: 2rem;
-  margin-top: 4rem;
-  box-shadow: 0 0.5rem 1.5rem -0.5rem rgb(60, 60, 60);
-  transition: 0.3s transform ease-in-out, 0.3s box-shadow ease-in-out;
-}
-.main-header__btn:hover {
-  transform: translateY(-0.5rem);
-  box-shadow: 0 1rem 1rem -0.5rem rgb(85, 85, 85);
 }
 .main-header__arrow-down {
   margin-top: 2.5rem;
@@ -370,19 +375,17 @@ button {
   justify-content: space-around;
   font-size: 1.6rem;
 }
+.projects .project-info .link-wraper .button {
+  display: flex;
+  align-items: center;
+  border-radius: 2.5rem;
+  padding: 0.2rem;
+  height: 100%;
+}
 .projects .project-info .link-wraper .project-link {
   display: flex;
   align-items: center;
-  border: 2px solid black;
-  border-radius: 2.5rem;
-  padding: 0.2rem;
-  padding-right: 2rem;
-  height: 100%;
-  transition: 0.2s background ease;
-}
-.projects .project-info .link-wraper .project-link:hover {
-  background-color: rgb(236, 236, 236);
-  box-shadow: 0rem 0.2rem 0.5rem -0.2rem black;
+  width: 100%;
 }
 .projects .project-info .link-wraper .project-link img {
   width: 4rem;
@@ -470,6 +473,7 @@ button {
 
 .contact {
   height: 100vh;
+  margin-bottom: 10rem;
 }
 .contact__title {
   margin-bottom: 4rem;
@@ -477,7 +481,7 @@ button {
 .contact__title::after {
   background-color: rgb(140, 243, 140);
 }
-.contact-data {
+.contact-details {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -485,11 +489,46 @@ button {
   font-size: 1.6rem;
   margin-bottom: 2rem;
 }
-.contact-data .contact__logo {
+.contact-details .contact__img {
   width: 5rem;
   margin-bottom: 2rem;
 }
-.contact__form {
+.contact-details .wraper {
+  display: flex;
+  align-items: flex-start;
+  transform: translateX(5%);
+}
+.contact-details .wraper .copy {
+  width: 2rem;
+  margin-left: 1rem;
+  transition: 0.3s transform ease-in-out;
+  cursor: pointer;
+}
+.contact-details .wraper .copy:hover {
+  transform: translate(0.2rem, -0.2rem);
+}
+.contact-details .wraper .copy:active {
+  transform: translate(0.2rem, 0);
+}
+.contact__form,
+.contact .form {
   display: flex;
   flex-direction: column;
+  font-size: 1.2rem;
+}
+.contact__form__label,
+.contact .form__label {
+  margin-bottom: 0.5rem;
+}
+.contact__form__input,
+.contact .form__input {
+  margin-bottom: 1rem;
+  border: 2px solid #434343;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  font-size: 1.6rem;
+}
+.contact__form__submit,
+.contact .form__submit {
+  background: none;
 }/*# sourceMappingURL=main.css.map */

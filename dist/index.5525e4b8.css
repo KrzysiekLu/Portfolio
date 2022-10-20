@@ -33,6 +33,10 @@
   padding: 0;
 }
 
+body {
+  background-color: #eeeded;
+}
+
 html {
   font-family: Roboto Mono, monospace;
   font-size: 62.5%;
@@ -88,6 +92,24 @@ button {
   transform: translateY(0);
 }
 
+.button {
+  min-width: 15rem;
+  min-height: 4rem;
+  border: 2px solid #434343;
+  border-radius: 2rem;
+  align-self: center;
+  margin-top: 4rem;
+  font-size: 1.6rem;
+  transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
+  display: block;
+  box-shadow: 0 .5rem 1rem -.5rem #3c3c3c;
+}
+
+.button:hover {
+  transform: translateY(-.5rem);
+  box-shadow: 0 1.5rem 1.5rem -1rem #919191;
+}
+
 .launch-screen {
   width: 100%;
   height: 100vh;
@@ -101,7 +123,7 @@ button {
 .launch-screen__curtain {
   height: 100%;
   width: 50%;
-  background-color: #d9d9d9;
+  background-color: #eeeded;
 }
 
 .launch-screen__curtain--left {
@@ -155,7 +177,7 @@ button {
 .navbar__menu, .navbar .menu {
   width: 15rem;
   height: 100%;
-  background-color: #d9d9d9;
+  background-color: #eeeded;
   border-radius: 0 2rem 2rem 0;
   flex-direction: column;
   font-size: 1.6rem;
@@ -177,7 +199,7 @@ button {
 }
 
 .navbar__menu__link:hover, .navbar .menu__link:hover {
-  color: #d9d9d9;
+  color: #eeeded;
   background-color: #434343;
   transition: background-color .2s ease-in, color .2s;
 }
@@ -272,24 +294,6 @@ button {
   text-align: center;
   font-size: 1.6rem;
   font-weight: 600;
-}
-
-.main-header__btn {
-  min-width: 15rem;
-  min-height: 4rem;
-  border: 2px solid #434343;
-  border-radius: 2rem;
-  align-self: center;
-  margin-top: 4rem;
-  font-size: 1.6rem;
-  transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
-  display: block;
-  box-shadow: 0 .5rem 1.5rem -.5rem #3c3c3c;
-}
-
-.main-header__btn:hover {
-  transform: translateY(-.5rem);
-  box-shadow: 0 1rem 1rem -.5rem #555;
 }
 
 .main-header__arrow-down {
@@ -433,19 +437,18 @@ button {
   display: flex;
 }
 
-.projects .project-info .link-wraper .project-link {
+.projects .project-info .link-wraper .button {
   height: 100%;
-  border: 2px solid #000;
   border-radius: 2.5rem;
   align-items: center;
-  padding: .2rem 2rem .2rem .2rem;
-  transition: background .2s;
+  padding: .2rem;
   display: flex;
 }
 
-.projects .project-info .link-wraper .project-link:hover {
-  background-color: #ececec;
-  box-shadow: 0 .2rem .5rem -.2rem #000;
+.projects .project-info .link-wraper .project-link {
+  width: 100%;
+  align-items: center;
+  display: flex;
 }
 
 .projects .project-info .link-wraper .project-link img {
@@ -531,6 +534,7 @@ button {
 
 .contact {
   height: 100vh;
+  margin-bottom: 10rem;
 }
 
 .contact__title {
@@ -541,7 +545,7 @@ button {
   background-color: #8cf38c;
 }
 
-.contact-data {
+.contact-details {
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -550,14 +554,52 @@ button {
   display: flex;
 }
 
-.contact-data .contact__logo {
+.contact-details .contact__img {
   width: 5rem;
   margin-bottom: 2rem;
 }
 
-.contact__form {
-  flex-direction: column;
+.contact-details .wraper {
+  align-items: flex-start;
   display: flex;
+  transform: translateX(5%);
+}
+
+.contact-details .wraper .copy {
+  width: 2rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: transform .3s ease-in-out;
+}
+
+.contact-details .wraper .copy:hover {
+  transform: translate(.2rem, -.2rem);
+}
+
+.contact-details .wraper .copy:active {
+  transform: translate(.2rem);
+}
+
+.contact__form, .contact .form {
+  flex-direction: column;
+  font-size: 1.2rem;
+  display: flex;
+}
+
+.contact__form__label, .contact .form__label {
+  margin-bottom: .5rem;
+}
+
+.contact__form__input, .contact .form__input {
+  border: 2px solid #434343;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  padding: .5rem;
+  font-size: 1.6rem;
+}
+
+.contact__form__submit, .contact .form__submit {
+  background: none;
 }
 
 /*# sourceMappingURL=index.5525e4b8.css.map */

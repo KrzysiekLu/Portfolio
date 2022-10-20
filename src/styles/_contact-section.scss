@@ -1,25 +1,60 @@
 .contact {
   height: 100vh;
+  margin-bottom: 10rem;
   &__title {
     margin-bottom: 4rem;
     &::after {
       background-color: rgb(140, 243, 140);
     }
   }
-  &-data {
+  &-details {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     font-size: 1.6rem;
     margin-bottom: 2rem;
-    .contact__logo {
+
+    .contact__img {
       width: 5rem;
       margin-bottom: 2rem;
     }
+    .wraper {
+      display: flex;
+      align-items: flex-start;
+      transform: translateX(5%);
+      .copy {
+        width: 2rem;
+        margin-left: 1rem;
+        transition: 0.3s transform ease-in-out;
+        cursor: pointer;
+        &:hover {
+          transform: translate(0.2rem, -0.2rem);
+        }
+        &:active {
+          transform: translate(0.2rem, 0);
+        }
+      }
+    }
   }
-  &__form {
+  &__form,
+  .form {
     display: flex;
     flex-direction: column;
+    font-size: 1.2rem;
+    &__label {
+      margin-bottom: 0.5rem;
+    }
+    &__input {
+      margin-bottom: 1rem;
+      border: 2px solid $border-color;
+      border-radius: 1rem;
+      padding: 0.5rem;
+      font-size: 1.6rem;
+    }
+
+    &__submit {
+      background: none;
+    }
   }
 }

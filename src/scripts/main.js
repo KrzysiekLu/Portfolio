@@ -5,3 +5,4 @@ import { moveHeaderArrow } from "./moveHeaderArrow.js";
 import { smoothScroll } from "./smoothScrollTo.js";
 import { observers } from "./observers.js";
 import { projectsSlider } from "./projectSlider.js";
+import { copyContactDetails } from "./copyContactDetails.js";

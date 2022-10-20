@@ -32,3 +32,19 @@
   transition: transform 1s ease, opacity 1s ease;
   opacity: 1;
 }
+.button {
+  display: block;
+  font-size: 1.6rem;
+  min-width: 15rem;
+  min-height: 4rem;
+  align-self: center;
+  border: 2px solid $border-color;
+  border-radius: 2rem;
+  margin-top: 4rem;
+  box-shadow: 0 0.5rem 1rem -0.5rem rgb(60, 60, 60);
+  transition: 0.3s transform ease-in-out, 0.3s box-shadow ease-in-out;
+  &:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1.5rem 1.5rem -1rem rgb(145, 145, 145);
+  }
+}
