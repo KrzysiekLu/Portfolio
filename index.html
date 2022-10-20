@@ -48,7 +48,7 @@
             <li class="menu__item"> <a data-destn="projects-section" class="menu__link"tabindex="-1" href="#project-section">Projects</a></li> 
          
           
-             <li class="menu__item"><a class="menu__link"tabindex="-1" href="#">Contact</a></li> 
+             <li class="menu__item"><a data-destn="contact-section" class="menu__link"tabindex="-1" href="#contact-section">Contact</a></li> 
          
         </ul>
         <div class="navbar__overlay"></div>
@@ -163,7 +163,26 @@
           </a>
         </div>
       </div>
-      
+    </section>
+    <section class="contact section" id="contact-section">
+      <h2 class="contact__title section-title">Contact</h2>
+      <div class="contact__email email contact-data">
+        <img class="email__logo contact__logo"src="src/images/email.svg" alt="email adres">
+        <p class="email__address">krzysztof.luuczak@gmail.com</p>
+      </div>
+      <div class="contact__phone phone contact-data">
+        <img class="phone__logo contact__logo"src="src/images/phone.svg" alt="phone number">
+        <p class="phone__number">722 090 193</p>
+      </div>
+      <form class="contact__form" action="">
+        <label for="name">Your name</label>
+        <input class="form__name" name="name" type="text">
+        <label for="message">Message</label>
+        <textarea name="message" class="form__message" cols="30" rows="10"></textarea>
+        <input type="submit" class="form__submit">
+
+      </form>
+
     </section>
   </body>
 </html>
