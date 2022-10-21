@@ -438,15 +438,16 @@ button {
 }
 
 .projects .project-info .link-wraper .button {
-  height: 100%;
   border-radius: 2.5rem;
-  align-items: center;
   padding: .2rem;
-  display: flex;
+}
+
+.projects .project-info .link-wraper .button:first-child img {
+  margin-right: 2rem;
 }
 
 .projects .project-info .link-wraper .project-link {
-  width: 100%;
+  justify-content: flex-start;
   align-items: center;
   display: flex;
 }

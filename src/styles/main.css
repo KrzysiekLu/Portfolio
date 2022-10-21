@@ -376,16 +376,16 @@ button {
   font-size: 1.6rem;
 }
 .projects .project-info .link-wraper .button {
-  display: flex;
-  align-items: center;
   border-radius: 2.5rem;
   padding: 0.2rem;
-  height: 100%;
+}
+.projects .project-info .link-wraper .button:first-child img {
+  margin-right: 2rem;
 }
 .projects .project-info .link-wraper .project-link {
   display: flex;
   align-items: center;
-  width: 100%;
+  justify-content: flex-start;
 }
 .projects .project-info .link-wraper .project-link img {
   width: 4rem;

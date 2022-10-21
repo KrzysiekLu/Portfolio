@@ -43,17 +43,19 @@
       font-size: 1.6rem;
 
       .button {
-        display: flex;
-        align-items: center;
         border-radius: 2.5rem;
-        padding: 0.2rem;
 
-        height: 100%;
+        padding: 0.2rem;
+        &:first-child {
+          img {
+            margin-right: 2rem;
+          }
+        }
       }
       .project-link {
         display: flex;
         align-items: center;
-        width: 100%;
+        justify-content: flex-start;
 
         img {
           width: 4rem;
