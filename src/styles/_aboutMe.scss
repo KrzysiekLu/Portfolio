@@ -43,3 +43,19 @@
     }
   }
 }
+@media screen and (min-width: 1000px) {
+  .about-me {
+    min-width: 28rem;
+    max-width: 70rem;
+    &__description {
+      max-width: 100%;
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+
+      .paragraph {
+        display: block;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

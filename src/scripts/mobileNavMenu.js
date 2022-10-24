@@ -1,4 +1,5 @@
 import { smoothScroll } from "./smoothScrollTo";
+const window = document.querySelector("html");
 
 export const mobileMenu = () => {
   const hamburgerButton = document.querySelector(".hamburger");
@@ -39,15 +40,41 @@ export const mobileMenu = () => {
   });
 
   //action after click on a navbar menu links
-  mobileMenuLinks.forEach((menulink) => {
-    menulink.addEventListener("click", (e) => {
-      e.preventDefault();
-      smoothScroll(e.target);
-      changeHamburgerButton();
-      showMobileMenu();
-      showOverlay();
-    });
+
+  function closeMobileMenu() {
+    mobileMenu.classList.remove("menu--open");
+    menuOverlay.classList.remove("navbar__overlay--open");
+    hamburgerButton.classList.remove("hamburger--open");
+  }
+
+  const actionMobile = (e) => {
+    e.preventDefault();
+    smoothScroll(e.target);
+    changeHamburgerButton();
+    showMobileMenu();
+    showOverlay();
+  };
+  const actionDesktop = (e) => {
+    e.preventDefault();
+    smoothScroll(e.target);
+  };
+  const menuObserver = new ResizeObserver((entry) => {
+    entry[0].contentRect.width <= 1000
+      ? (mobileMenuLinks.forEach((menulink) => {
+          menulink.addEventListener("click", (e) => {
+            actionMobile(e);
+          });
+        }),
+        changeTabBlock(-1),
+        closeMobileMenu())
+      : mobileMenuLinks.forEach((menulink) => {
+          menulink.addEventListener("click", (e) => {
+            actionDesktop(e);
+          });
+          changeTabBlock(1);
+        });
   });
+  menuObserver.observe(window);
 };
 
 mobileMenu();

@@ -1431,6 +1431,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "mobileMenu", ()=>mobileMenu);
 var _smoothScrollTo = require("./smoothScrollTo");
+const window = document.querySelector("html");
 const mobileMenu = ()=>{
     const hamburgerButton = document.querySelector(".hamburger");
     const mobileMenu = document.querySelector(".menu");
@@ -1460,15 +1461,35 @@ const mobileMenu = ()=>{
         showOverlay();
     });
     //action after click on a navbar menu links
-    mobileMenuLinks.forEach((menulink)=>{
-        menulink.addEventListener("click", (e)=>{
-            e.preventDefault();
-            (0, _smoothScrollTo.smoothScroll)(e.target);
-            changeHamburgerButton();
-            showMobileMenu();
-            showOverlay();
+    function closeMobileMenu() {
+        mobileMenu.classList.remove("menu--open");
+        menuOverlay.classList.remove("navbar__overlay--open");
+        hamburgerButton.classList.remove("hamburger--open");
+    }
+    const actionMobile = (e)=>{
+        e.preventDefault();
+        (0, _smoothScrollTo.smoothScroll)(e.target);
+        changeHamburgerButton();
+        showMobileMenu();
+        showOverlay();
+    };
+    const actionDesktop = (e)=>{
+        e.preventDefault();
+        (0, _smoothScrollTo.smoothScroll)(e.target);
+    };
+    const menuObserver = new ResizeObserver((entry)=>{
+        entry[0].contentRect.width <= 1000 ? (mobileMenuLinks.forEach((menulink)=>{
+            menulink.addEventListener("click", (e)=>{
+                actionMobile(e);
+            });
+        }), changeTabBlock(-1), closeMobileMenu()) : mobileMenuLinks.forEach((menulink)=>{
+            menulink.addEventListener("click", (e)=>{
+                actionDesktop(e);
+            });
+            changeTabBlock(1);
         });
     });
+    menuObserver.observe(window);
 };
 mobileMenu();
 

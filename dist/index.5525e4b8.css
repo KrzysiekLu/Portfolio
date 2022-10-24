@@ -214,7 +214,7 @@ button {
   opacity: 0;
   z-index: -1;
   background-color: #2d2c2c8c;
-  transition: opacity .5s, display .1s .5s;
+  transition: opacity .5s, display .1s 1.5s;
   display: none;
   position: fixed;
   top: 0;
@@ -224,6 +224,51 @@ button {
 .navbar__overlay--open {
   opacity: 1;
   display: flex;
+}
+
+@media screen and (min-width: 1000px) {
+  .navbar {
+    top: 0;
+    left: 0;
+    transform: translate(0);
+  }
+
+  .navbar .menu {
+    width: 100%;
+    background-color: #0000;
+    border-radius: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    top: 0;
+    left: 0;
+  }
+
+  .navbar .menu__item:first-child {
+    margin-top: 0;
+  }
+
+  .navbar .menu__link {
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+  }
+
+  .navbar .menu--open {
+    transform: translateX(0);
+  }
+
+  .navbar__overlay {
+    opacity: 1;
+    background-color: #77777757;
+    display: flex;
+  }
+
+  .navbar__overlay--open {
+    opacity: 1;
+    background-color: #8080803a;
+    display: flex;
+  }
 }
 
 .hamburger {
@@ -257,10 +302,21 @@ button {
   transform: rotate(45deg)translate(-.8rem, -1rem);
 }
 
+@media screen and (min-width: 1000px) {
+  .hamburger {
+    display: none;
+  }
+}
+
 .main-header {
-  max-width: 100%;
-  flex-direction: column;
   margin-top: 5rem;
+}
+
+.main-header .container {
+  min-width: 280px;
+  max-width: 500px;
+  flex-direction: column;
+  margin: 0 auto;
   display: flex;
 }
 
@@ -353,6 +409,24 @@ button {
 .about-me__description .paragraph {
   margin-bottom: 2rem;
   display: block;
+}
+
+@media screen and (min-width: 1000px) {
+  .about-me {
+    min-width: 28rem;
+    max-width: 70rem;
+  }
+
+  .about-me__description {
+    max-width: 100%;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+
+  .about-me__description .paragraph {
+    margin-bottom: 2rem;
+    display: block;
+  }
 }
 
 .skils__title:after {
