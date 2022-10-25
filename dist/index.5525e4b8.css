@@ -54,6 +54,7 @@ ul {
 button {
   background-color: none;
   cursor: pointer;
+  color: #000;
   background: none;
   border: none;
   font-family: Roboto Mono, monospace;
