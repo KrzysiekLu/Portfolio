@@ -33,7 +33,7 @@ button {
 
 .section-title {
   font-size: 2.4rem;
-  margin-bottom: 2.3rem;
+  margin-bottom: 5rem;
   position: relative;
   display: inline-block;
 }
@@ -49,7 +49,7 @@ button {
 }
 
 .section {
-  padding: 0 2.8rem;
+  padding: 10rem 2.8rem;
   opacity: 0;
   transform: translateY(5rem);
   max-width: 50rem;
@@ -314,7 +314,6 @@ button {
 }
 
 .about-me {
-  margin-top: 0rem;
   position: relative;
 }
 .about-me::after {
@@ -375,15 +374,9 @@ button {
   background-color: rgb(96, 224, 233);
 }
 .skils__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   grid-template-columns: repeat(1, 1fr);
-  grid-auto-columns: -webkit-max-content;
-  grid-auto-columns: max-content;
 }
 .skils__item {
-  min-width: 28rem;
   display: flex;
   align-items: center;
   margin-bottom: 3rem;
@@ -402,6 +395,16 @@ button {
   font-size: 1.6rem;
 }
 
+@media screen and (min-width: 1000px) {
+  .skils {
+    min-width: 28rem;
+    max-width: 90rem;
+  }
+  .skils__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 .projects__title:after {
   background-color: rgb(171, 238, 243);
 }
