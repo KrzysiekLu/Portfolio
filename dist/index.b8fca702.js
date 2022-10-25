@@ -1460,11 +1460,13 @@ const mobileMenu = ()=>{
         showMobileMenu();
         showOverlay();
     });
+    // show navbar when cursor is at the very top
+    const toglleDesktopNavbarCursor = (e)=>{
+        e.clientY < 100 && mobileMenu.classList.add("menu--openDesk");
+    };
     // show nav when scroll up hide when scroll down
-    const toglleDesktopNavbar = ()=>{
-        document.addEventListener("wheel", (e)=>{
-            e.deltaY === 100 ? mobileMenu.style.transform = "translateY(-100%)" : mobileMenu.style.transform = "translateY(0)";
-        });
+    const toglleDesktopNavbarScroll = (e)=>{
+        e.deltaY === 100 ? mobileMenu.classList.remove("menu--openDesk") : mobileMenu.classList.add("menu--openDesk");
     };
     //action after click on a navbar menu links
     function closeMobileMenu() {
@@ -1484,18 +1486,30 @@ const mobileMenu = ()=>{
         (0, _smoothScrollTo.smoothScroll)(e.target);
     };
     const menuObserver = new ResizeObserver((entry)=>{
-        if (entry[0].contentRect.width <= 1000) mobileMenuLinks.forEach((menulink)=>{
-            menulink.addEventListener("click", (e)=>{
-                actionMobile(e);
+        if (entry[0].contentRect.width < 1000) {
+            console.log("mały");
+            mobileMenuLinks.forEach((menulink)=>{
+                menulink.addEventListener("click", (e)=>{
+                    actionMobile(e);
+                });
             });
-        }), changeTabBlock(-1), closeMobileMenu();
-        else mobileMenuLinks.forEach((menulink)=>{
-            menulink.addEventListener("click", (e)=>{
-                actionDesktop(e);
-            });
+            changeTabBlock(-1);
+            closeMobileMenu();
+        } else {
+            console.log("duży");
             changeTabBlock(1);
-            toglleDesktopNavbar();
-        });
+            mobileMenuLinks.forEach((menulink)=>{
+                menulink.addEventListener("click", (e)=>{
+                    actionDesktop(e);
+                });
+                document.addEventListener("wheel", (e)=>{
+                    toglleDesktopNavbarScroll(e);
+                });
+                document.addEventListener("mouseover", (e)=>{
+                    toglleDesktopNavbarCursor(e);
+                });
+            });
+        }
     });
     menuObserver.observe(window);
 };
