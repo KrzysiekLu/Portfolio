@@ -13,7 +13,7 @@ const handleSubmit = (event) => {
   const myForm = event.target;
   const formData = new FormData(myForm);
 
-  fetch("krzysztof.luuczak@gmail.com", {
+  fetch("/", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams(formData).toString(),
