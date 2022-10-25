@@ -19,7 +19,7 @@
 
 //common styles to every section
 .section {
-  padding: 10rem 2.8rem;
+  padding: 5rem 2.8rem;
   opacity: 0;
   transform: translateY(5rem);
   max-width: 50rem;
@@ -54,7 +54,7 @@
 }
 @media screen and (min-width: 560px) {
   .section {
-    max-width: 90rem;
+    max-width: 50rem;
   }
   .section-title {
     transform: translateX(-5rem);

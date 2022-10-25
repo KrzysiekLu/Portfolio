@@ -50,7 +50,7 @@ button {
 }
 
 .section {
-  padding: 10rem 2.8rem;
+  padding: 5rem 2.8rem;
   opacity: 0;
   transform: translateY(5rem);
   max-width: 50rem;
@@ -86,7 +86,7 @@ button {
 
 @media screen and (min-width: 560px) {
   .section {
-    max-width: 90rem;
+    max-width: 50rem;
   }
   .section-title {
     transform: translateX(-5rem);
@@ -418,15 +418,11 @@ button {
 .projects__title:after {
   background-color: rgb(171, 238, 243);
 }
-.projects__container {
-  display: flex;
-  justify-content: center;
-}
 .projects .project-info {
   position: relative;
   margin-top: 2rem;
   text-align: center;
-  min-height: 18rem;
+  min-height: 20rem;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -468,21 +464,19 @@ button {
   margin-right: 0.5rem;
 }
 
-.keen-slider {
-  max-width: 260px;
-}
-
 [class^=number-slide],
 [class*=" number-slide"] {
-  padding: 0.1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  max-width: 100%;
 }
 [class^=number-slide] img,
 [class*=" number-slide"] img {
-  width: 100%;
+  padding: 0.5rem;
+  width: auto;
+  max-height: 50rem;
+  max-width: 100%;
 }
 
 .navigation-wrapper {
@@ -557,17 +551,21 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
   }
-  .navigation-wrapper .keen-slider {
-    max-width: 50rem;
-    max-height: 50rem;
+  .navigation-wrapper [class^=number-slide],
+.navigation-wrapper [class*=" number-slide"] {
+    max-height: 60rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .navigation-wrapper [class^=number-slide] img,
 .navigation-wrapper [class*=" number-slide"] img {
-    height: 100%;
+    padding: 0.5rem;
     width: auto;
-    padding: 1rem;
+    max-height: -webkit-max-content;
+    max-height: -moz-max-content;
+    max-height: max-content;
   }
 }
 .contact {

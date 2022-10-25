@@ -1707,7 +1707,12 @@ const projectsSlider = ()=>{
             markup(true);
         });
     }
-    var slider = new (0, _keenSliderCjsDefault.default)("#my-keen-slider", {}, [
+    var slider = new (0, _keenSliderCjsDefault.default)("#my-keen-slider", {
+        loop: true,
+        slides: {
+            origin: "center"
+        }
+    }, [
         navigation
     ]);
 };

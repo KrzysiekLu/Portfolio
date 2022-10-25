@@ -127,7 +127,15 @@ export const projectsSlider = () => {
       markup(true);
     });
   }
-
-  var slider = new KeenSlider("#my-keen-slider", {}, [navigation]);
+  var slider = new KeenSlider(
+    "#my-keen-slider",
+    {
+      loop: true,
+      slides: {
+        origin: "center",
+      },
+    },
+    [navigation]
+  );
 };
 projectsSlider();
