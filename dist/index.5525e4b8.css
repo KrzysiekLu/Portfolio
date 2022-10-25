@@ -110,6 +110,10 @@ button {
   box-shadow: 0 1.5rem 1.5rem -1rem #919191;
 }
 
+.button:active {
+  transform: translateY(-.3rem);
+}
+
 .launch-screen {
   width: 100%;
   height: 100vh;
@@ -674,6 +678,43 @@ button {
 
 .contact__form__submit, .contact .form__submit {
   background: none;
+}
+
+.contact__overlay {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility, opacity .5s;
+}
+
+.contact__overlay--open {
+  visibility: visible;
+  opacity: 1;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background-color: #27272782;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.contact__overlay--open .confirm-message {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 3rem 5rem;
+}
+
+.contact__overlay--open .confirm-message h3 {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+
+.contact__overlay--open .confirm-message p {
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=index.5525e4b8.css.map */
