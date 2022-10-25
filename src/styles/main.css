@@ -36,6 +36,7 @@ button {
   margin-bottom: 5rem;
   position: relative;
   display: inline-block;
+  padding: 1rem;
 }
 .section-title::after {
   content: "";
@@ -83,6 +84,15 @@ button {
   transform: translateY(-0.3rem);
 }
 
+@media screen and (min-width: 560px) {
+  .section {
+    max-width: 90rem;
+  }
+  .section-title {
+    transform: translateX(-5rem);
+    transition: 0.3s transform ease-in-out;
+  }
+}
 .launch-screen {
   width: 100%;
   height: 100vh;
@@ -358,7 +368,7 @@ button {
 @media screen and (min-width: 1000px) {
   .about-me {
     min-width: 28rem;
-    max-width: 70rem;
+    max-width: 90rem;
   }
   .about-me__description {
     max-width: 100%;
@@ -446,17 +456,12 @@ button {
   justify-content: space-around;
   font-size: 1.6rem;
 }
-.projects .project-info .link-wraper .button {
-  border-radius: 2.5rem;
-  padding: 0.2rem;
-}
-.projects .project-info .link-wraper .button:first-child img {
-  margin-right: 2rem;
-}
 .projects .project-info .link-wraper .project-link {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  border-radius: 2.5rem;
+  padding: 0.2rem;
 }
 .projects .project-info .link-wraper .project-link img {
   width: 4rem;
@@ -473,17 +478,15 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 35rem;
+  width: 100%;
 }
 [class^=number-slide] img,
 [class*=" number-slide"] img {
-  max-height: 100%;
-  max-width: 100%;
+  width: 100%;
 }
 
 .navigation-wrapper {
   position: relative;
-  max-width: 100%;
 }
 
 .dots {
@@ -542,6 +545,31 @@ button {
   background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' fill='grey' viewBox='0 0 24 24' %3E%3Cpath d='M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z'%3E%3C/path%3E%3C/svg%3E");
 }
 
+@media screen and (min-width: 1000px) {
+  .projects {
+    max-width: 90rem;
+  }
+  .projects .project-info .link-wraper {
+    min-width: 50%;
+  }
+  .navigation-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .navigation-wrapper .keen-slider {
+    max-width: 50rem;
+    max-height: 50rem;
+  }
+  .navigation-wrapper [class^=number-slide] img,
+.navigation-wrapper [class*=" number-slide"] img {
+    height: 100%;
+    width: auto;
+    padding: 1rem;
+  }
+}
 .contact {
   height: 100vh;
   margin-bottom: 10rem;
