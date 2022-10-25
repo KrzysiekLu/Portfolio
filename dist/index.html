@@ -183,7 +183,8 @@
           <img class="copy" src="/copy.b3150bc0.svg" alt="copy adress email">
         </div>
       </div>
-      <form class="contact__form" name="contact" netlify="">
+      <form class="contact__form" name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact">
         <label class="form__label" for="name">Your name</label>
         <input class="form__name form__input" name="name" type="text">
         <label class="form__label" for="message">Message</label>

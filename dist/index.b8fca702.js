@@ -540,6 +540,19 @@ var _smoothScrollToJs = require("./smoothScrollTo.js");
 var _observersJs = require("./observers.js");
 var _projectSliderJs = require("./projectSlider.js");
 var _copyContactDetailsJs = require("./copyContactDetails.js");
+const handleSubmit = (event)=>{
+    event.preventDefault();
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+    fetch("krzysztof.luuczak@gmail.com", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: new URLSearchParams(formData).toString()
+    }).then(()=>console.log("Form successfully submitted")).catch((error)=>alert(error));
+};
+document.querySelector("form").addEventListener("submit", handleSubmit);
 
 },{"./lounch-screen.js":"iuvBz","./mobileNavMenu.js":"6YDZm","./writeSubtitle.js":"5UTro","./moveHeaderArrow.js":"713a0","./smoothScrollTo.js":"lrzML","./observers.js":"5bz6Q","./projectSlider.js":"426q8","./copyContactDetails.js":"5Z0Wl"}],"iuvBz":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
