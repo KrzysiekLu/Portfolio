@@ -1460,6 +1460,12 @@ const mobileMenu = ()=>{
         showMobileMenu();
         showOverlay();
     });
+    // show nav when scroll up hide when scroll down
+    const toglleDesktopNavbar = ()=>{
+        document.addEventListener("wheel", (e)=>{
+            e.deltaY === 100 ? mobileMenu.style.transform = "translateY(-100%)" : mobileMenu.style.transform = "translateY(0)";
+        });
+    };
     //action after click on a navbar menu links
     function closeMobileMenu() {
         mobileMenu.classList.remove("menu--open");
@@ -1488,10 +1494,10 @@ const mobileMenu = ()=>{
                 actionDesktop(e);
             });
             changeTabBlock(1);
+            toglleDesktopNavbar();
         });
     });
     menuObserver.observe(window);
-    console.log(window);
 };
 mobileMenu();
 
