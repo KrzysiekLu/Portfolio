@@ -59,22 +59,25 @@ export const mobileMenu = () => {
     smoothScroll(e.target);
   };
   const menuObserver = new ResizeObserver((entry) => {
-    entry[0].contentRect.width <= 1000
-      ? (mobileMenuLinks.forEach((menulink) => {
-          menulink.addEventListener("click", (e) => {
-            actionMobile(e);
-          });
-        }),
-        changeTabBlock(-1),
-        closeMobileMenu())
-      : mobileMenuLinks.forEach((menulink) => {
-          menulink.addEventListener("click", (e) => {
-            actionDesktop(e);
-          });
-          changeTabBlock(1);
+    if (entry[0].contentRect.width <= 1000) {
+      mobileMenuLinks.forEach((menulink) => {
+        menulink.addEventListener("click", (e) => {
+          actionMobile(e);
         });
+      }),
+        changeTabBlock(-1),
+        closeMobileMenu();
+    } else {
+      mobileMenuLinks.forEach((menulink) => {
+        menulink.addEventListener("click", (e) => {
+          actionDesktop(e);
+        });
+        changeTabBlock(1);
+      });
+    }
   });
   menuObserver.observe(window);
+  console.log(window);
 };
 
 mobileMenu();
