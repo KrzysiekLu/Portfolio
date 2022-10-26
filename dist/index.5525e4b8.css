@@ -711,7 +711,22 @@ button {
 }
 
 .contact__form__submit, .contact .form__submit {
+  color: #000;
   background: none;
+}
+
+.contact__form__input--error, .contact .form__input--error {
+  border-color: #fa6969;
+}
+
+.contact__form__error-info, .contact .form__error-info {
+  color: red;
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.contact__form__error-info--active, .contact .form__error-info--active {
+  opacity: 1;
 }
 
 .contact__overlay {

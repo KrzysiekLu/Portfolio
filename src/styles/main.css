@@ -629,6 +629,21 @@ button {
 .contact__form__submit,
 .contact .form__submit {
   background: none;
+  color: black;
+}
+.contact__form__input--error,
+.contact .form__input--error {
+  border-color: rgb(250, 105, 105);
+}
+.contact__form__error-info,
+.contact .form__error-info {
+  color: red;
+  opacity: 0;
+  transition: 0.2s opacity ease;
+}
+.contact__form__error-info--active,
+.contact .form__error-info--active {
+  opacity: 1;
 }
 
 .contact__overlay {

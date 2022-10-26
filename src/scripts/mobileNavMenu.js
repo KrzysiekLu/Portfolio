@@ -73,8 +73,6 @@ export const mobileMenu = () => {
   };
   const menuObserver = new ResizeObserver((entry) => {
     if (entry[0].contentRect.width < 1000) {
-      console.log("mały");
-
       mobileMenuLinks.forEach((menulink) => {
         menulink.addEventListener("click", (e) => {
           actionMobile(e);
@@ -83,7 +81,6 @@ export const mobileMenu = () => {
       changeTabBlock(-1);
       closeMobileMenu();
     } else {
-      console.log("duży");
       changeTabBlock(1);
 
       mobileMenuLinks.forEach((menulink) => {

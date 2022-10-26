@@ -55,6 +55,18 @@
 
     &__submit {
       background: none;
+      color: black;
+    }
+    &__input--error {
+      border-color: rgb(250, 105, 105);
+    }
+    &__error-info {
+      color: red;
+      opacity: 0;
+      transition: 0.2s opacity ease;
+    }
+    &__error-info--active {
+      opacity: 1;
     }
   }
 }

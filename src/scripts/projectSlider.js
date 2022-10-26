@@ -13,7 +13,6 @@ const linksGitHub = [
   "https://github.com/KrzysiekLu/Country-information-cards",
 ];
 const projectLinks = document.querySelectorAll(".project-link");
-console.log(projectLinks);
 
 export const projectsSlider = () => {
   function navigation(slider) {

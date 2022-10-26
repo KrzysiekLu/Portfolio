@@ -539,27 +539,9 @@ var _moveHeaderArrowJs = require("./moveHeaderArrow.js");
 var _smoothScrollToJs = require("./smoothScrollTo.js");
 var _observersJs = require("./observers.js");
 var _projectSliderJs = require("./projectSlider.js");
-var _copyContactDetailsJs = require("./copyContactDetails.js");
-const handleSubmit = (event)=>{
-    event.preventDefault();
-    const myForm = event.target;
-    const formData = new FormData(myForm);
-    fetch("/", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
-        },
-        body: new URLSearchParams(formData).toString()
-    }).then(()=>{
-        document.querySelector(".contact__overlay").classList.add("contact__overlay--open");
-        document.querySelector(".confirm-message__button").addEventListener("click", ()=>{
-            document.querySelector(".contact__overlay").classList.remove("contact__overlay--open");
-        });
-    }).catch((error)=>alert(error));
-};
-document.querySelector("form").addEventListener("submit", handleSubmit);
+var _contactJs = require("./contact.js");
 
-},{"./lounch-screen.js":"iuvBz","./mobileNavMenu.js":"6YDZm","./writeSubtitle.js":"5UTro","./moveHeaderArrow.js":"713a0","./smoothScrollTo.js":"lrzML","./observers.js":"5bz6Q","./projectSlider.js":"426q8","./copyContactDetails.js":"5Z0Wl"}],"iuvBz":[function(require,module,exports) {
+},{"./lounch-screen.js":"iuvBz","./mobileNavMenu.js":"6YDZm","./writeSubtitle.js":"5UTro","./moveHeaderArrow.js":"713a0","./smoothScrollTo.js":"lrzML","./observers.js":"5bz6Q","./projectSlider.js":"426q8","./contact.js":"iFrdo"}],"iuvBz":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "launchScreen", ()=>launchScreen);
@@ -610,37 +592,7 @@ const launchScreen = ()=>{
     });
 }; // launchScreen();
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./writeSubtitle.js":"5UTro"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"5UTro":[function(require,module,exports) {
+},{"./writeSubtitle.js":"5UTro","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5UTro":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "writeSubtitle", ()=>writeSubtitle);
@@ -1444,6 +1396,36 @@ const writeSubtitle = ()=>{
     ]);
 });
 
+},{}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
 },{}],"6YDZm":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -1505,7 +1487,6 @@ const mobileMenu = ()=>{
     };
     const menuObserver = new ResizeObserver((entry)=>{
         if (entry[0].contentRect.width < 1000) {
-            console.log("mały");
             mobileMenuLinks.forEach((menulink)=>{
                 menulink.addEventListener("click", (e)=>{
                     actionMobile(e);
@@ -1514,7 +1495,6 @@ const mobileMenu = ()=>{
             changeTabBlock(-1);
             closeMobileMenu();
         } else {
-            console.log("duży");
             changeTabBlock(1);
             mobileMenuLinks.forEach((menulink)=>{
                 menulink.addEventListener("click", (e)=>{
@@ -1533,7 +1513,7 @@ const mobileMenu = ()=>{
 };
 mobileMenu();
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./smoothScrollTo":"lrzML"}],"lrzML":[function(require,module,exports) {
+},{"./smoothScrollTo":"lrzML","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lrzML":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "smoothScroll", ()=>smoothScroll);
@@ -1612,7 +1592,6 @@ const linksGitHub = [
     "https://github.com/KrzysiekLu/Country-information-cards", 
 ];
 const projectLinks = document.querySelectorAll(".project-link");
-console.log(projectLinks);
 const projectsSlider = ()=>{
     function navigation(slider) {
         let wrapper, dots, arrowLeft, arrowRight;
@@ -2391,19 +2370,64 @@ exports.default = function(n, i, e) {
     }
 };
 
-},{}],"5Z0Wl":[function(require,module,exports) {
+},{}],"iFrdo":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "copyContactDetails", ()=>copyContactDetails);
-const copyContactDetails = ()=>{
-    const copyLinks = document.querySelectorAll(" .wraper >.copy");
-    copyLinks.forEach((el)=>{
-        el.addEventListener("click", (e)=>{
-            navigator.clipboard.writeText(e.target.previousElementSibling.textContent);
+parcelHelpers.export(exports, "contact", ()=>contact);
+const contact = ()=>{
+    // Copy tel or email to clipboard
+    const copyContactDetails = ()=>{
+        const copyLinks = document.querySelectorAll(" .wraper >.copy");
+        copyLinks.forEach((el)=>{
+            el.addEventListener("click", (e)=>{
+                navigator.clipboard.writeText(e.target.previousElementSibling.textContent);
+            });
         });
+    };
+    copyContactDetails();
+    ////////////// From validation
+    const emailInput = document.querySelector(".form__email");
+    const formErrorInfo = document.querySelector(".form__error-info");
+    // Email validation
+    const checkEmail = (mail)=>{
+        const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (mail.value.match(mailFormat)) return true;
+        else return false;
+    };
+    const showError = ()=>{
+        formErrorInfo.classList.add("form__error-info--active");
+        emailInput.classList.add("form__input--error");
+    };
+    const resetErrors = ()=>{
+        emailInput.classList.remove("form__input--error");
+        formErrorInfo.classList.remove("form__error-info--active");
+    };
+    const validateForm = (event)=>{
+        checkEmail(emailInput) ? (handleSubmit(event), resetErrors()) : showError();
+    };
+    // Submit Email
+    const handleSubmit = (event)=>{
+        const myForm = event.target;
+        const formData = new FormData(myForm);
+        fetch("/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: new URLSearchParams(formData).toString()
+        }).then(()=>{
+            document.querySelector(".contact__overlay").classList.add("contact__overlay--open");
+            document.querySelector(".confirm-message__button").addEventListener("click", ()=>{
+                document.querySelector(".contact__overlay").classList.remove("contact__overlay--open");
+            });
+        }).catch((error)=>alert(error));
+    };
+    document.querySelector("form").addEventListener("submit", (event)=>{
+        event.preventDefault();
+        validateForm(event);
     });
 };
-copyContactDetails();
+contact();
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["7age3","3cYfC"], "3cYfC", "parcelRequire94c2")
 
