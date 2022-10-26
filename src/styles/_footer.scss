@@ -1,5 +1,5 @@
 .footer {
-  background-color: grey;
+  background-color: $accent-color;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,7 +23,7 @@
       justify-content: center;
       transition: 0.3s ease-in-out background-color;
       &:hover {
-        background-color: rgba(255, 255, 255, 0.295);
+        background-color: $main-bg-color;
       }
       img {
         width: 4rem;

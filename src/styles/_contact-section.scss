@@ -2,7 +2,7 @@
   &__title {
     margin-bottom: 4rem;
     &::after {
-      background-color: rgb(140, 243, 140);
+      background-color: $skils-accent;
     }
   }
   &-details {
@@ -56,10 +56,10 @@
       color: black;
     }
     &__input--error {
-      border-color: rgb(250, 105, 105);
+      border-color: $error-color;
     }
     &__error-info {
-      color: red;
+      color: $error-color;
       opacity: 0;
       transition: 0.2s opacity ease;
     }
@@ -84,7 +84,7 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(39, 39, 39, 0.511);
+  background-color: $overlay-color;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -92,7 +92,7 @@
   z-index: 10;
 
   .confirm-message {
-    background-color: white;
+    background-color: $main-bg-color;
     padding: 3rem 5rem;
     border-radius: 1rem;
     h3 {

@@ -81,7 +81,6 @@ button {
 
 .section {
   opacity: 0;
-  max-width: 100%;
   margin: 0 auto;
   padding: 5rem 2.8rem;
   transform: translateY(5rem);
@@ -230,7 +229,7 @@ button {
   height: 100%;
   opacity: 0;
   z-index: -1;
-  background-color: #2d2c2c8c;
+  background-color: #27272782;
   transition: opacity .5s, display .1s 1.5s;
   display: none;
   position: fixed;
@@ -484,7 +483,7 @@ button {
 }
 
 .projects__title:after {
-  background-color: #abeef3;
+  background-color: #f3bb4d8f;
 }
 
 .projects .project-info {
@@ -650,12 +649,50 @@ button {
   }
 }
 
+.footer {
+  background-color: #434343;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  transform: translate(0);
+}
+
+.footer__info {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.footer__link-container {
+  display: flex;
+}
+
+.footer__link-container .footer__link {
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
+  transition: background-color .3s ease-in-out;
+  display: flex;
+}
+
+.footer__link-container .footer__link:hover {
+  background-color: #eeeded;
+}
+
+.footer__link-container .footer__link img {
+  width: 4rem;
+  height: 4rem;
+}
+
 .contact__title {
   margin-bottom: 4rem;
 }
 
 .contact__title:after {
-  background-color: #8cf38c;
+  background-color: #60e0e9;
 }
 
 .contact-details {
@@ -721,7 +758,7 @@ button {
 }
 
 .contact__form__error-info, .contact .form__error-info {
-  color: red;
+  color: #fa6969;
   opacity: 0;
   transition: opacity .2s;
 }
@@ -754,7 +791,7 @@ button {
 }
 
 .contact__overlay--open .confirm-message {
-  background-color: #fff;
+  background-color: #eeeded;
   border-radius: 1rem;
   padding: 3rem 5rem;
 }
@@ -766,44 +803,6 @@ button {
 
 .contact__overlay--open .confirm-message p {
   font-size: 1.5rem;
-}
-
-.footer {
-  background-color: gray;
-  flex-direction: column;
-  align-items: center;
-  margin: 0;
-  padding: 2rem;
-  display: flex;
-  transform: translate(0);
-}
-
-.footer__info {
-  text-align: center;
-  font-size: 1.3rem;
-}
-
-.footer__link-container {
-  display: flex;
-}
-
-.footer__link-container .footer__link {
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem;
-  padding: 1rem;
-  transition: background-color .3s ease-in-out;
-  display: flex;
-}
-
-.footer__link-container .footer__link:hover {
-  background-color: #ffffff4b;
-}
-
-.footer__link-container .footer__link img {
-  width: 4rem;
-  height: 4rem;
 }
 
 /*# sourceMappingURL=index.5525e4b8.css.map */
