@@ -649,10 +649,6 @@ button {
   }
 }
 
-.contact {
-  height: 100vh;
-}
-
 .contact__title {
   margin-bottom: 4rem;
 }
@@ -775,13 +771,14 @@ button {
   background-color: gray;
   flex-direction: column;
   align-items: center;
+  margin: 0;
   padding: 2rem;
   display: flex;
+  transform: translate(0);
 }
 
 .footer__info {
   text-align: center;
-  margin-bottom: 1rem;
   font-size: 1.3rem;
 }
 
