@@ -1,6 +1,6 @@
 .contact {
   height: 100vh;
-  margin-bottom: 10rem;
+
   &__title {
     margin-bottom: 4rem;
     &::after {
@@ -72,6 +72,7 @@
 }
 .contact__overlay {
   visibility: hidden;
+  height: 0;
   opacity: 0;
   transition: visibility 0s, opacity 0.5s ease;
 }

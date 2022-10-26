@@ -149,7 +149,7 @@ button {
 .navbar {
   position: fixed;
   top: 0;
-  min-width: 100%;
+  width: 100%;
   padding: 1rem;
   z-index: 2;
 }
@@ -416,6 +416,9 @@ button {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+.projects {
+  max-width: 90%;
+}
 .projects__title:after {
   background-color: rgb(171, 238, 243);
 }
@@ -453,16 +456,20 @@ button {
   justify-content: space-around;
   font-size: 1.6rem;
 }
+.projects .project-info .link-wraper button {
+  border: none;
+}
 .projects .project-info .link-wraper .project-link {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  border-radius: 2.5rem;
+  border-radius: 3rem;
   padding: 0.2rem;
+  border: 2px solid #434343;
 }
 .projects .project-info .link-wraper .project-link img {
   width: 4rem;
-  margin-right: 0.5rem;
+  margin-right: 1rem;
 }
 
 [class^=number-slide],
@@ -541,9 +548,6 @@ button {
 }
 
 @media screen and (min-width: 1000px) {
-  .projects {
-    max-width: 90rem;
-  }
   .projects .project-info .link-wraper {
     min-width: 50%;
   }
@@ -571,7 +575,6 @@ button {
 }
 .contact {
   height: 100vh;
-  margin-bottom: 10rem;
 }
 .contact__title {
   margin-bottom: 4rem;
@@ -648,6 +651,7 @@ button {
 
 .contact__overlay {
   visibility: hidden;
+  height: 0;
   opacity: 0;
   transition: visibility 0s, opacity 0.5s ease;
 }
@@ -678,4 +682,37 @@ button {
 }
 .contact__overlay--open .confirm-message p {
   font-size: 1.5rem;
+}
+
+.footer {
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+.footer__info {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.footer__link-container {
+  display: flex;
+}
+.footer__link-container .footer__link {
+  padding: 0rem;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in-out background-color;
+}
+.footer__link-container .footer__link:hover {
+  background-color: rgba(255, 255, 255, 0.295);
+}
+.footer__link-container .footer__link img {
+  width: 4rem;
+  height: 4rem;
 }/*# sourceMappingURL=main.css.map */

@@ -184,7 +184,7 @@ button {
 }
 
 .navbar {
-  min-width: 100%;
+  width: 100%;
   z-index: 2;
   padding: 1rem;
   position: fixed;
@@ -483,6 +483,10 @@ button {
   }
 }
 
+.projects {
+  max-width: 90%;
+}
+
 .projects__title:after {
   background-color: #abeef3;
 }
@@ -527,8 +531,13 @@ button {
   display: flex;
 }
 
+.projects .project-info .link-wraper button {
+  border: none;
+}
+
 .projects .project-info .link-wraper .project-link {
-  border-radius: 2.5rem;
+  border: 2px solid #434343;
+  border-radius: 3rem;
   justify-content: flex-start;
   align-items: center;
   padding: .2rem;
@@ -537,7 +546,7 @@ button {
 
 .projects .project-info .link-wraper .project-link img {
   width: 4rem;
-  margin-right: .5rem;
+  margin-right: 1rem;
 }
 
 [class^="number-slide"], [class*=" number-slide"] {
@@ -613,10 +622,6 @@ button {
 }
 
 @media screen and (min-width: 1000px) {
-  .projects {
-    max-width: 90rem;
-  }
-
   .projects .project-info .link-wraper {
     min-width: 50%;
   }
@@ -646,7 +651,6 @@ button {
 
 .contact {
   height: 100vh;
-  margin-bottom: 10rem;
 }
 
 .contact__title {
@@ -731,6 +735,7 @@ button {
 
 .contact__overlay {
   visibility: hidden;
+  height: 0;
   opacity: 0;
   transition: visibility, opacity .5s;
 }
@@ -764,6 +769,43 @@ button {
 
 .contact__overlay--open .confirm-message p {
   font-size: 1.5rem;
+}
+
+.footer {
+  background-color: gray;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  display: flex;
+}
+
+.footer__info {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.footer__link-container {
+  display: flex;
+}
+
+.footer__link-container .footer__link {
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
+  transition: background-color .3s ease-in-out;
+  display: flex;
+}
+
+.footer__link-container .footer__link:hover {
+  background-color: #ffffff4b;
+}
+
+.footer__link-container .footer__link img {
+  width: 4rem;
+  height: 4rem;
 }
 
 /*# sourceMappingURL=index.5525e4b8.css.map */

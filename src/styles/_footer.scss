@@ -1,0 +1,33 @@
+.footer {
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+
+  &__info {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  &__link-container {
+    display: flex;
+    .footer__link {
+      padding: 0rem;
+      margin: 1rem;
+      padding: 1rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s ease-in-out background-color;
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.295);
+      }
+      img {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+  }
+}
