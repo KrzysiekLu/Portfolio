@@ -54,7 +54,7 @@ button {
   padding: 5rem 2.8rem;
   opacity: 0;
   transform: translateY(5rem);
-  max-width: 50rem;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -416,9 +416,6 @@ button {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-.projects {
-  max-width: 90%;
-}
 .projects__title:after {
   background-color: rgb(171, 238, 243);
 }
@@ -458,6 +455,7 @@ button {
 }
 .projects .project-info .link-wraper button {
   border: none;
+  border-radius: 3rem;
 }
 .projects .project-info .link-wraper .project-link {
   display: flex;
@@ -465,7 +463,7 @@ button {
   justify-content: flex-start;
   border-radius: 3rem;
   padding: 0.2rem;
-  border: 2px solid #434343;
+  border: 3px solid #434343;
 }
 .projects .project-info .link-wraper .project-link img {
   width: 4rem;
@@ -548,6 +546,9 @@ button {
 }
 
 @media screen and (min-width: 1000px) {
+  .projects {
+    max-width: 90rem;
+  }
   .projects .project-info .link-wraper {
     min-width: 50%;
   }

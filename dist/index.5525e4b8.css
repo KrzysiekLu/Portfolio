@@ -81,7 +81,7 @@ button {
 
 .section {
   opacity: 0;
-  max-width: 50rem;
+  max-width: 100%;
   margin: 0 auto;
   padding: 5rem 2.8rem;
   transform: translateY(5rem);
@@ -483,10 +483,6 @@ button {
   }
 }
 
-.projects {
-  max-width: 90%;
-}
-
 .projects__title:after {
   background-color: #abeef3;
 }
@@ -533,10 +529,11 @@ button {
 
 .projects .project-info .link-wraper button {
   border: none;
+  border-radius: 3rem;
 }
 
 .projects .project-info .link-wraper .project-link {
-  border: 2px solid #434343;
+  border: 3px solid #434343;
   border-radius: 3rem;
   justify-content: flex-start;
   align-items: center;
@@ -622,6 +619,10 @@ button {
 }
 
 @media screen and (min-width: 1000px) {
+  .projects {
+    max-width: 90rem;
+  }
+
   .projects .project-info .link-wraper {
     min-width: 50%;
   }
