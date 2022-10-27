@@ -282,16 +282,16 @@ button {
 .main-header .container {
   display: flex;
   flex-direction: column;
-  min-width: 280px;
-  max-width: 500px;
+  min-width: 28rem;
+  max-width: 90rem;
   margin: 0 auto;
 }
 .main-header__title {
   position: relative;
   margin-top: 7rem;
-  margin-left: 4rem;
   font-size: 2.4rem;
   max-width: 14.3rem;
+  margin-left: 2rem;
   z-index: -1;
 }
 .main-header__title::before {
@@ -307,6 +307,7 @@ button {
 .main-header__image {
   display: block;
   margin: 3.2rem auto 3.2rem;
+  max-width: 20rem;
 }
 .main-header__subtitle {
   font-size: 1.6rem;
@@ -323,6 +324,17 @@ button {
   transform: translateY(2rem);
 }
 
+@media screen and (min-width: 1000px) {
+  .main-header {
+    margin-top: 10rem;
+  }
+  .main-header__image {
+    max-width: 30rem;
+  }
+  .main-header__arrow-down {
+    margin-bottom: 8rem;
+  }
+}
 .about-me {
   position: relative;
 }
