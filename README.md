@@ -1,3 +1,3 @@
 # My portfolio
 
-[live-site](www.google.com)
+[live-site](https://krzysztof-luczak.netlify.app/)
