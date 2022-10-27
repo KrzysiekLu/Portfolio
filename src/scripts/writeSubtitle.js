@@ -8,3 +8,5 @@ export const writeSubtitle = () => {
     backDelay: 800,
   });
 };
+
+writeSubtitle();

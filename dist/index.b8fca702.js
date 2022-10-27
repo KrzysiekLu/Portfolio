@@ -640,6 +640,7 @@ const writeSubtitle = ()=>{
         backDelay: 800
     });
 };
+writeSubtitle();
 
 },{"typed.js":"4hQNd","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4hQNd":[function(require,module,exports) {
 /*!
