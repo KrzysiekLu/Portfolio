@@ -6,32 +6,39 @@
   }
 
   .project-info {
-    position: relative;
     margin-top: 2rem;
     text-align: center;
-    min-height: 20rem;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 17rem;
 
     &__wraper {
-      top: 0;
-      position: absolute;
-      opacity: 0;
-      transition: 1s opacity ease 0.2;
+      display: none;
+      margin-bottom: 2rem;
     }
     &__wraper--show {
-      z-index: 2;
-      opacity: 1;
-      transition: 1s opacity ease;
+      display: block;
+      animation: fadeIn 1s;
     }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
     .name {
       font-size: 2rem;
       margin-bottom: 1.5rem;
     }
     .describe {
       font-size: 1.6rem;
-      margin-bottom: 3rem;
+      margin-bottom: 0rem;
     }
     .link-wraper {
       min-width: 100%;
@@ -51,7 +58,7 @@
 
         img {
           width: 3rem;
-          margin-right: 0.5rem;
+          margin-right: 1rem;
         }
       }
     }
