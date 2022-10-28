@@ -35,25 +35,23 @@
     }
     .link-wraper {
       min-width: 100%;
-      display: flex;
-      justify-content: space-around;
       font-size: 1.6rem;
 
-      button {
-        border: none;
-        border-radius: 3rem;
-      }
       .project-link {
+        display: inline-block;
+      }
+
+      .button--projects {
+        border: 0.2rem solid black;
+        padding: 0.2rem 1rem 0.2rem 0.2rem;
+        border-radius: 3rem;
         display: flex;
         align-items: center;
-        justify-content: flex-start;
-        border-radius: 3rem;
-        padding: 0.2rem;
-        border: 3px solid $border-color;
+        width: 13rem;
 
         img {
-          width: 4rem;
-          margin-right: 1rem;
+          width: 3rem;
+          margin-right: 0.5rem;
         }
       }
     }

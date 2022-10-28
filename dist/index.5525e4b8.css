@@ -60,72 +60,6 @@ button {
   font-family: Roboto Mono, monospace;
 }
 
-.section-title {
-  margin-bottom: 5rem;
-  padding: 1rem;
-  font-size: 2.4rem;
-  display: inline-block;
-  position: relative;
-}
-
-.section-title:after {
-  content: "";
-  width: 100%;
-  height: 50%;
-  z-index: -1;
-  display: block;
-  position: absolute;
-  bottom: 0%;
-  left: 10%;
-}
-
-.section {
-  opacity: 0;
-  margin: 0 auto;
-  padding: 5rem 2.8rem;
-  transform: translateY(5rem);
-}
-
-.section--active {
-  opacity: 1;
-  padding-top: 7rem;
-  transition: transform 1s, opacity 1s;
-  transform: translateY(0);
-}
-
-.button {
-  min-width: 15rem;
-  min-height: 4rem;
-  border: 2px solid #434343;
-  border-radius: 2rem;
-  align-self: center;
-  margin-top: 4rem;
-  font-size: 1.6rem;
-  transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
-  display: block;
-  box-shadow: 0 .5rem 1rem -.5rem #3c3c3c;
-}
-
-.button:hover {
-  transform: translateY(-.5rem);
-  box-shadow: 0 1.5rem 1.5rem -1rem #919191;
-}
-
-.button:active {
-  transform: translateY(-.3rem);
-}
-
-@media screen and (min-width: 560px) {
-  .section {
-    max-width: 50rem;
-  }
-
-  .section-title {
-    transition: transform .3s ease-in-out;
-    transform: translateX(-5rem);
-  }
-}
-
 .launch-screen {
   width: 100%;
   height: 100vh;
@@ -536,28 +470,25 @@ button {
 
 .projects .project-info .link-wraper {
   min-width: 100%;
-  justify-content: space-around;
   font-size: 1.6rem;
-  display: flex;
-}
-
-.projects .project-info .link-wraper button {
-  border: none;
-  border-radius: 3rem;
 }
 
 .projects .project-info .link-wraper .project-link {
-  border: 3px solid #434343;
+  display: inline-block;
+}
+
+.projects .project-info .link-wraper .button--projects {
+  width: 13rem;
+  border: .2rem solid #000;
   border-radius: 3rem;
-  justify-content: flex-start;
   align-items: center;
-  padding: .2rem;
+  padding: .2rem 1rem .2rem .2rem;
   display: flex;
 }
 
-.projects .project-info .link-wraper .project-link img {
-  width: 4rem;
-  margin-right: 1rem;
+.projects .project-info .link-wraper .button--projects img {
+  width: 3rem;
+  margin-right: .5rem;
 }
 
 [class^="number-slide"], [class*=" number-slide"] {
@@ -661,6 +592,72 @@ button {
     max-height: -moz-max-content;
     max-height: max-content;
     padding: .5rem;
+  }
+}
+
+.section-title {
+  margin-bottom: 5rem;
+  padding: 1rem;
+  font-size: 2.4rem;
+  display: inline-block;
+  position: relative;
+}
+
+.section-title:after {
+  content: "";
+  width: 100%;
+  height: 50%;
+  z-index: -1;
+  display: block;
+  position: absolute;
+  bottom: 0%;
+  left: 10%;
+}
+
+.section {
+  opacity: 0;
+  margin: 0 auto;
+  padding: 5rem 2.8rem;
+  transform: translateY(5rem);
+}
+
+.section--active {
+  opacity: 1;
+  padding-top: 7rem;
+  transition: transform 1s, opacity 1s;
+  transform: translateY(0);
+}
+
+.button {
+  min-width: 15rem;
+  min-height: 4rem;
+  border: 2px solid #434343;
+  border-radius: 2rem;
+  align-self: center;
+  margin-top: 4rem;
+  font-size: 1.6rem;
+  transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
+  display: block;
+  box-shadow: 0 .5rem 1rem -.5rem #3c3c3c;
+}
+
+.button:hover {
+  transform: translateY(-.5rem);
+  box-shadow: 0 1.5rem 1.5rem -1rem #919191;
+}
+
+.button:active {
+  transform: translateY(-.3rem);
+}
+
+@media screen and (min-width: 560px) {
+  .section {
+    max-width: 50rem;
+  }
+
+  .section-title {
+    transition: transform .3s ease-in-out;
+    transform: translateX(-5rem);
   }
 }
 
