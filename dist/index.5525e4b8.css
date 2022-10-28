@@ -337,7 +337,7 @@ button {
 }
 
 .main-header {
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 
 .main-header .container {
@@ -360,7 +360,7 @@ button {
 .main-header__title:after {
   width: 50%;
   background: #c7929291;
-  left: 50%;
+  left: 0;
 }
 
 .main-header__image {

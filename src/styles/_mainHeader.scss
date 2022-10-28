@@ -1,5 +1,5 @@
 .main-header {
-  margin-top: 5rem;
+  margin-top: 2rem;
 
   .container {
     display: flex;
@@ -17,7 +17,7 @@
     }
 
     &::after {
-      left: 50%;
+      left: 0;
       width: 50%;
       background: $main-title-color-accent;
     }

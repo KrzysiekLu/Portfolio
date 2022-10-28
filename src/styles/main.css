@@ -296,7 +296,7 @@ button {
   }
 }
 .main-header {
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 .main-header .container {
   display: flex;
@@ -313,7 +313,7 @@ button {
   font-weight: 900;
 }
 .main-header__title::after {
-  left: 50%;
+  left: 0;
   width: 50%;
   background: rgba(199, 146, 146, 0.57);
 }
