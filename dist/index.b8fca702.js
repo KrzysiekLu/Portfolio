@@ -1471,6 +1471,7 @@ const mobileMenu = ()=>{
     };
     //action after click on a navbar menu links
     function closeMobileMenu() {
+        console.log("ddd");
         mobileMenu.classList.remove("menu--open");
         menuOverlay.classList.remove("navbar__overlay--open");
         hamburgerButton.classList.remove("hamburger--open");
@@ -1479,8 +1480,6 @@ const mobileMenu = ()=>{
         e.preventDefault();
         (0, _smoothScrollTo.smoothScroll)(e.target);
         changeHamburgerButton();
-        showMobileMenu();
-        showOverlay();
     };
     const actionDesktop = (e)=>{
         e.preventDefault();
@@ -1490,11 +1489,12 @@ const mobileMenu = ()=>{
         if (entry[0].contentRect.width < 1000) {
             mobileMenuLinks.forEach((menulink)=>{
                 menulink.addEventListener("click", (e)=>{
+                    closeMobileMenu();
+                    changeHamburgerButton();
                     actionMobile(e);
                 });
             });
             changeTabBlock(-1);
-            closeMobileMenu();
         } else {
             changeTabBlock(1);
             mobileMenuLinks.forEach((menulink)=>{
