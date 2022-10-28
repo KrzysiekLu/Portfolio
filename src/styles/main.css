@@ -97,6 +97,22 @@ button {
     margin-top: 5rem;
   }
 }
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .launch-screen {
   width: 100%;
   height: 100vh;
@@ -196,14 +212,13 @@ button {
   width: 100%;
   height: 100%;
   background-color: rgba(39, 39, 39, 0.5098039216);
-  opacity: 0;
   display: none;
-  transition: 0.5s opacity ease, 0.1s display ease 1.5s;
   z-index: -1;
+  -webkit-animation: fadeIn 0.3s;
+          animation: fadeIn 0.3s;
 }
 .navbar__overlay--open {
-  opacity: 1;
-  display: flex;
+  display: block;
 }
 
 @media screen and (min-width: 1000px) {
@@ -291,9 +306,11 @@ button {
 }
 .main-header__title {
   max-width: 30rem;
+  font-weight: 100;
+  margin-left: 2rem;
 }
 .main-header__title span {
-  font-weight: 100;
+  font-weight: 900;
 }
 .main-header__title::after {
   left: 50%;
@@ -446,22 +463,6 @@ button {
   -webkit-animation: fadeIn 1s;
           animation: fadeIn 1s;
 }
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 .projects .project-info .name {
   font-size: 2rem;
   margin-bottom: 1.5rem;
@@ -595,7 +596,7 @@ button {
   }
 }
 .footer {
-  background-color: #434343;
+  background-color: rgb(167, 167, 167);
   display: flex;
   flex-direction: column;
   align-items: center;

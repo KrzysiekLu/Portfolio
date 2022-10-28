@@ -10,8 +10,10 @@
 
   &__title {
     max-width: 30rem;
+    font-weight: 100;
+    margin-left: 2rem;
     span {
-      font-weight: 100;
+      font-weight: 900;
     }
 
     &::after {
