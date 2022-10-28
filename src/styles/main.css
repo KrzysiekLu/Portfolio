@@ -212,13 +212,14 @@ button {
   width: 100%;
   height: 100%;
   background-color: rgba(39, 39, 39, 0.5098039216);
-  display: none;
   z-index: -1;
-  -webkit-animation: fadeIn 0.3s;
-          animation: fadeIn 0.3s;
+  width: 0;
+  transition: 0.3s all ease-in-out;
+  opacity: 0;
 }
 .navbar__overlay--open {
-  display: block;
+  width: 100%;
+  opacity: 100%;
 }
 
 @media screen and (min-width: 1000px) {
