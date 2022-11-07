@@ -631,8 +631,8 @@ var _typedJsDefault = parcelHelpers.interopDefault(_typedJs);
 const writeSubtitle = ()=>{
     const text = new (0, _typedJsDefault.default)(".main-header__subtitle", {
         strings: [
-            "Front end developer.",
-            " Wannabe front end developer."
+            "Front-end developer.",
+            "Wannabe front-end developer."
         ],
         // loop: true,
         typeSpeed: 40,
