@@ -1584,13 +1584,15 @@ const linksLiveSite = [
     " https://advice-generator-krzysiek.netlify.app",
     "https://noughts-and-crosses-kl.netlify.app/",
     "https://ornate-raindrop-671bf8.netlify.app/",
-    "https://dazzling-rugelach-d5a483.netlify.app/", 
+    "https://dazzling-rugelach-d5a483.netlify.app/",
+    "https://timely-kataifi-dcb1c1.netlify.app/", 
 ];
 const linksGitHub = [
     "https://github.com/KrzysiekLu/Advice-Generator-FrontEndMentor",
     "https://github.com/KrzysiekLu/NOUGHTS-AND-CROSSES",
     "https://github.com/KrzysiekLu/Form",
-    "https://github.com/KrzysiekLu/Country-information-cards", 
+    "https://github.com/KrzysiekLu/Country-information-cards",
+    "https://github.com/KrzysiekLu/Timer", 
 ];
 const projectLinks = document.querySelectorAll(".project-link");
 const projectsSlider = ()=>{
