@@ -462,7 +462,7 @@ button {
 .projects .project-info__wraper--show {
   display: block;
   -webkit-animation: fadeIn 1s;
-          animation: fadeIn 1s;
+  animation: fadeIn 1s;
 }
 .projects .project-info .name {
   font-size: 2rem;
@@ -492,14 +492,14 @@ button {
   margin-right: 1rem;
 }
 
-[class^=number-slide],
+[class^="number-slide"],
 [class*=" number-slide"] {
   display: flex;
   align-items: center;
   justify-content: center;
   max-width: 100%;
 }
-[class^=number-slide] img,
+[class^="number-slide"] img,
 [class*=" number-slide"] img {
   padding: 0.5rem;
   width: auto;
@@ -580,15 +580,15 @@ button {
     flex-direction: column;
     align-items: center;
   }
-  .navigation-wrapper [class^=number-slide],
-.navigation-wrapper [class*=" number-slide"] {
+  .navigation-wrapper [class^="number-slide"],
+  .navigation-wrapper [class*=" number-slide"] {
     max-height: 60rem;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .navigation-wrapper [class^=number-slide] img,
-.navigation-wrapper [class*=" number-slide"] img {
+  .navigation-wrapper [class^="number-slide"] img,
+  .navigation-wrapper [class*=" number-slide"] img {
     padding: 0.5rem;
     width: auto;
     max-height: -webkit-max-content;
@@ -736,4 +736,4 @@ button {
 }
 .contact__overlay--open .confirm-message p {
   font-size: 1.5rem;
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */

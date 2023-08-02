@@ -1,6 +1,7 @@
 import KeenSlider from "../../node_modules/keen-slider/keen-slider.cjs";
 
 const linksLiveSite = [
+  "https://melodious-bombolone-1d775e.netlify.app/",
   " https://advice-generator-krzysiek.netlify.app",
   "https://noughts-and-crosses-kl.netlify.app/",
   "https://ornate-raindrop-671bf8.netlify.app/",
@@ -8,6 +9,7 @@ const linksLiveSite = [
   "https://timely-kataifi-dcb1c1.netlify.app/",
 ];
 const linksGitHub = [
+  "https://github.com/KrzysiekLu/MemoryGame",
   "https://github.com/KrzysiekLu/Advice-Generator-FrontEndMentor",
   "https://github.com/KrzysiekLu/NOUGHTS-AND-CROSSES",
   "https://github.com/KrzysiekLu/Form",
