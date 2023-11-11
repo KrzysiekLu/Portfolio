@@ -559,7 +559,14 @@ button {
   border-radius: 3rem;
   align-items: center;
   padding: .2rem 1rem .2rem .2rem;
+  transition: all .3s;
   display: flex;
+}
+
+.projects .project-info .link-wraper .button--projects:hover {
+  background: #ebebeb;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px -5px #000;
 }
 
 .projects .project-info .link-wraper .button--projects img {
@@ -615,9 +622,15 @@ button {
   height: 30px;
   fill: #fff;
   cursor: pointer;
+  border-radius: 10px;
+  transition: all .3s;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.arrow:hover {
+  transform: scale(1.2)translateY(-50%);
 }
 
 .arrow--left {
@@ -664,7 +677,6 @@ button {
 
   .navigation-wrapper [class^="number-slide"] img, .navigation-wrapper [class*=" number-slide"] img {
     width: auto;
-    max-height: -webkit-max-content;
     max-height: -moz-max-content;
     max-height: max-content;
     padding: .5rem;
