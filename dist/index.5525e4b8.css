@@ -81,8 +81,11 @@ button {
 
 .section {
   opacity: 0;
+  min-width: 28rem;
+  max-width: 90rem;
   margin: 0 auto;
   padding: 5rem 2.8rem;
+  position: relative;
   transform: translateY(5rem);
 }
 
@@ -114,7 +117,7 @@ button {
   transform: translateY(-.3rem);
 }
 
-@media screen and (min-width: 560px) {
+@media screen and (min-width: 560px) and (max-width: 1000px) {
   .section {
     max-width: 50rem;
   }
