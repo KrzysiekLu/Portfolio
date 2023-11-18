@@ -12,4 +12,8 @@
 @import "projects";
 @import "footer";
 @import "contact-section";
-@import "experience"
+@import "experience";
+
+.typed-cursor .typed-cursor--blink{
+    display: none;
+}

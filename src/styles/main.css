@@ -408,6 +408,7 @@ button {
   background-color: rgb(96, 224, 233);
 }
 .skils__container {
+  display: grid;
   grid-template-columns: repeat(1, 1fr);
 }
 .skils__item {
@@ -429,7 +430,12 @@ button {
   font-size: 1.6rem;
 }
 
-@media screen and (min-width: 1000px) {
+@media (min-width: 576px) {
+  .skils__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1200px) {
   .skils {
     min-width: 28rem;
     max-width: 90rem;
@@ -753,4 +759,8 @@ button {
 
 .experience .section-title:after {
   background-color: rgba(199, 146, 146, 0.568627451);
+}
+
+.typed-cursor .typed-cursor--blink {
+  display: none;
 }/*# sourceMappingURL=main.css.map */

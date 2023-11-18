@@ -6,6 +6,7 @@ export const writeSubtitle = () => {
     typeSpeed: 40,
     backSpeed: 50,
     backDelay: 800,
+    showCursor: false,
   });
 };
 

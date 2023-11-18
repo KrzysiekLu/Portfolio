@@ -607,7 +607,8 @@ const writeSubtitle = ()=>{
         // loop: true,
         typeSpeed: 40,
         backSpeed: 50,
-        backDelay: 800
+        backDelay: 800,
+        showCursor: false
     });
 };
 writeSubtitle();
