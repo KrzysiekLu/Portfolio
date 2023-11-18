@@ -740,4 +740,17 @@ button {
 }
 .contact__overlay--open .confirm-message p {
   font-size: 1.5rem;
+}
+
+.section.experience h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.section.experience p {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.experience .section-title:after {
+  background-color: rgba(199, 146, 146, 0.568627451);
 }/*# sourceMappingURL=main.css.map */

@@ -842,4 +842,18 @@ button {
   font-size: 1.5rem;
 }
 
+.section.experience h3 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.section.experience p {
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+}
+
+.experience .section-title:after {
+  background-color: #c7929291;
+}
+
 /*# sourceMappingURL=index.5525e4b8.css.map */
