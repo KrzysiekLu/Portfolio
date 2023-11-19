@@ -369,7 +369,7 @@ button {
 }
 
 .main-header__image {
-  max-width: 20rem;
+  max-width: 25rem;
   margin: 3.2rem auto;
   display: block;
 }
@@ -377,6 +377,7 @@ button {
 .main-header__subtitle {
   height: 4.6rem;
   text-align: center;
+  min-height: 2rem;
   font-size: 1.6rem;
   font-weight: 600;
 }
@@ -391,21 +392,31 @@ button {
   transform: translateY(2rem);
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 991px) {
   .main-header {
+    height: calc(100vh - 10rem);
     margin-top: 10rem;
+  }
+
+  .main-header .button {
+    margin-top: 0;
   }
 
   .main-header .container {
     max-width: 90rem;
+    height: 100%;
+    padding: 0;
   }
 
   .main-header__image {
-    max-width: 30rem;
+    height: 35%;
+    width: auto;
+    max-width: unset;
+    margin: 2rem auto;
   }
 
-  .main-header__arrow-down {
-    margin-bottom: 8rem;
+  .main-header__subtitle {
+    height: 15%;
   }
 }
 

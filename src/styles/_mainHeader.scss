@@ -25,13 +25,14 @@
   &__image {
     display: block;
     margin: 3.2rem auto 3.2rem;
-    max-width: 20rem;
+    max-width: 25rem;
   }
   &__subtitle {
     font-size: 1.6rem;
     font-weight: 600;
     height: 4.6rem;
     text-align: center;
+    min-height: 2rem;
   }
 
   &__arrow-down {
@@ -44,17 +45,26 @@
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 991px) {
   .main-header {
+    margin-top: 10rem;
+    height: calc(100vh - 10rem);
+    .button{
+      margin-top: 0;
+    }
     .container {
       max-width: 90rem;
+      height: 100%;
+      padding: 0;
     }
-    margin-top: 10rem;
-    &__image {
-      max-width: 30rem;
-    }
-    &__arrow-down {
-      margin-bottom: 8rem;
-    }
+   &__image{
+    margin: 2rem auto;
+    height: 35%;
+    width: auto;
+    max-width: unset;
+   }
+   &__subtitle{
+    height: 15%;
+   }
   }
 }
